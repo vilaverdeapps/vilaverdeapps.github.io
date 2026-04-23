@@ -1,3 +1,7 @@
 CLAUDE.md
 docs/superpowers/
 .claude/
+
+# Local dev
+node_modules/
+.DS_Store
