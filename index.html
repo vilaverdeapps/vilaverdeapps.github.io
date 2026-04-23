@@ -3,12 +3,105 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Snap-Back: Space Mining</title>
-    <link rel="canonical" href="https://vilaverdeapps.github.io/MARKETING.html" />
-    <meta http-equiv="refresh" content="0; url=MARKETING.html" />
+    <title>vilaverdeapps — Native iOS apps, thoughtfully crafted</title>
+    <meta
+      name="description"
+      content="vilaverdeapps develops native iOS applications with careful attention to design, privacy, and user experience. Explore our apps."
+    />
+    <link rel="canonical" href="https://vilaverdeapps.github.io/" />
     <meta name="robots" content="index,follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="vilaverdeapps" />
+    <meta property="og:title" content="vilaverdeapps — Native iOS apps, thoughtfully crafted" />
+    <meta property="og:description" content="Native iOS applications with careful attention to design, privacy, and user experience." />
+    <meta property="og:url" content="https://vilaverdeapps.github.io/" />
+    <meta property="og:locale" content="en_US" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+
+    <style>
+      .app-grid {
+        display: grid;
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+      }
+      @media (min-width: 540px) {
+        .app-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .app-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .app-card h3 {
+        font-family: var(--font-display);
+        font-size: 1.25rem;
+        margin: 0;
+      }
+      .app-card p {
+        color: var(--muted);
+        margin: 0;
+        font-size: 0.95rem;
+      }
+      .app-card .btn {
+        align-self: flex-start;
+        padding: 0.5rem 1.25rem;
+        font-size: 0.9rem;
+      }
+    </style>
   </head>
   <body>
-    <p><a href="MARKETING.html">Continue to Snap-Back: Space Mining</a></p>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <p class="site-title"><a href="/">vilaverdeapps</a></p>
+        <nav class="nav" aria-label="Primary">
+          <a href="https://github.com/vilaverdeapps" rel="noopener noreferrer">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <article>
+        <header class="hero">
+          <h1>vilaverdeapps</h1>
+          <p class="hero__lede">
+            Native iOS apps, thoughtfully crafted. Built with care for privacy, design, and the people who use them.
+          </p>
+        </header>
+
+        <section aria-labelledby="apps-heading">
+          <h2 id="apps-heading">Our apps</h2>
+          <div class="app-grid">
+            <div class="card app-card">
+              <h3>Snap-Back: Space Mining</h3>
+              <p>Physics-based hyper-casual slingshot game. Launch, grapple, snap back — with tactile feedback via the Taptic Engine.</p>
+              <a class="btn" href="/snapback/MARKETING.html">Learn more</a>
+            </div>
+            <div class="card app-card">
+              <h3>Patter</h3>
+              <p>AI language learning that feels like texting. Chat with personas, get grammar corrections, learn at your level — serverless and BYOK.</p>
+              <a class="btn" href="/patter/MARKETING.html">Learn more</a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__links">
+        <a href="https://github.com/vilaverdeapps" rel="noopener noreferrer">GitHub</a>
+      </div>
+      <p>&copy; vilaverdeapps. All apps are developed for iPhone and published on the App Store.</p>
+    </footer>
   </body>
 </html>

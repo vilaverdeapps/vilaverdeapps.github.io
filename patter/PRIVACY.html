@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Patter</title>
+    <meta
+      name="description"
+      content="How Patter handles information on iPhone: local conversations via SwiftData, your own API key in the Keychain, no developer server."
+    />
+    <link rel="canonical" href="https://vilaverdeapps.github.io/patter/PRIVACY.html" />
+    <meta name="robots" content="index,follow" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Privacy Policy — Patter" />
+    <meta
+      property="og:description"
+      content="Patter is a serverless language-learning app. Conversations stay on your device; API keys are stored in the iOS Keychain."
+    />
+    <meta property="og:url" content="https://vilaverdeapps.github.io/patter/PRIVACY.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <p class="site-title"><a href="/patter/MARKETING.html">Patter</a></p>
+        <nav class="nav" aria-label="Primary">
+          <a href="/patter/MARKETING.html">Home</a>
+          <a href="/patter/SUPPORT.html">Support</a>
+          <a href="#app-store-placeholder">App Store</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="prose">
+      <a class="back-link" href="/patter/MARKETING.html">← Back to home</a>
+      <article>
+        <header>
+          <h1>Patter — Privacy Policy</h1>
+          <p><strong>Last updated:</strong> 22 April 2026</p>
+        </header>
+
+        <p>
+          This policy describes how <strong>Patter</strong> ("the app") handles information when you use it on
+          iPhone. The app is a <strong>serverless, local-first application</strong>; you do <strong>not</strong>
+          need an account, and there is no developer-owned server or cloud service running behind the app.
+        </p>
+        <p>
+          If anything here conflicts with <strong>Apple's in-app labels</strong> in App Store Connect or on the
+          App Store product page, the <strong>store listing</strong> and <strong>system permission
+          dialogs</strong> control for required disclosures.
+        </p>
+
+        <hr />
+
+        <h2>Summary</h2>
+        <ul>
+          <li>
+            <strong>All conversations</strong> (chat messages, grammar corrections, persona data) are stored
+            <strong>on your device only</strong> via SwiftData. We do not collect, transmit, or store any of your
+            conversation content on a server.
+          </li>
+          <li>
+            The app requires you to provide your own <strong>API key</strong> from an AI/LLM provider (for example
+            <strong>Google AI Studio</strong>, <strong>OpenAI</strong>, or <strong>Anthropic</strong>). Your API
+            key is stored exclusively in the <strong>iOS Keychain</strong> — it is never written to SwiftData,
+            UserDefaults, or logs.
+          </li>
+          <li>
+            When you send a message in a chat, your text (along with recent conversation history and system prompts)
+            is sent <strong>directly from your device</strong> to the API of the provider whose key you configured.
+            That provider's own privacy policy governs how they process that data.
+          </li>
+          <li>
+            The app uses <strong>local notifications</strong> (proactive pings) to remind you to practice. These are
+            scheduled entirely on your device and do not transmit any personal information.
+          </li>
+        </ul>
+
+        <h2>Information the app stores or processes</h2>
+
+        <h3>Conversation data (stored locally)</h3>
+        <ul>
+          <li>
+            <strong>What:</strong> Chat messages, AI persona definitions (name, emoji, backstory, tone), grammar
+            correction history, and conversation metadata.
+          </li>
+          <li>
+            <strong>Where:</strong> Stored locally on your device via SwiftData in the app's container. Nothing is
+            uploaded to any server.
+          </li>
+          <li>
+            <strong>Your control:</strong> You can delete conversations at any time within the app. Deleting the
+            app removes all stored data (subject to iOS backup behavior).
+          </li>
+        </ul>
+
+        <h3>API key (stored in Keychain)</h3>
+        <ul>
+          <li>
+            <strong>What:</strong> Your personal API key for an LLM provider.
+          </li>
+          <li>
+            <strong>Where:</strong> Stored exclusively in the iOS Keychain using standard secure-storage APIs. The
+            key is never stored in SwiftData, UserDefaults, files, or logs.
+          </li>
+          <li>
+            <strong>Usage:</strong> Used only to authenticate requests sent directly from your device to your chosen
+            LLM provider's API endpoint. The app developer cannot access or see your key.
+          </li>
+        </ul>
+
+        <h3>Data sent to your LLM provider</h3>
+        <ul>
+          <li>
+            <strong>What:</strong> Your chat messages, recent conversation history (last 20 messages), system prompts
+            (including your selected CEFR level and persona instructions).
+          </li>
+          <li>
+            <strong>Where:</strong> Sent directly to the API endpoint of the provider you configured. This traffic is
+            not routed through any intermediate server owned by the app developer.
+          </li>
+          <li>
+            <strong>Governance:</strong> Your data sent to the LLM provider is subject to that provider's privacy
+            policy and terms of service, not this policy. We encourage you to review their policies before providing
+            an API key.
+          </li>
+        </ul>
+
+        <h3>iCloud sync (opt-in, future feature)</h3>
+        <ul>
+          <li>
+            <strong>What:</strong> Conversation data may be synced via your personal iCloud container in a future
+            update (v2). This is opt-in and uses your own private iCloud storage.
+          </li>
+          <li>
+            <strong>Governance:</strong> iCloud sync follows Apple's privacy framework and your iCloud settings. No
+            data is accessible to the app developer beyond what iCloud provides for your personal container.
+          </li>
+        </ul>
+
+        <h2>No advertising or analytics SDKs</h2>
+        <p>
+          Patter does not integrate any third-party advertising, analytics, or crash-reporting SDKs. No tracking
+          identifiers, coarse location data, or usage diagnostics are collected by the app itself. Any data
+          processing related to advertising or analytics is governed solely by your LLM provider's own services
+          (if applicable to your account with them).
+        </p>
+
+        <h2>Data retention</h2>
+        <p>
+          All conversation data and settings remain on your device until you delete them in the app or remove the
+          app. API keys stored in the Keychain persist until you remove the app or clear Keychain entries via iOS
+          Settings. There is no server-side data to request deletion of.
+        </p>
+
+        <h2>Children</h2>
+        <p>
+          The app is not directed to children. Parents and guardians should use Apple's
+          <strong>Screen Time</strong> and <strong>Family Sharing</strong> controls if needed.
+        </p>
+
+        <h2>International users</h2>
+        <p>
+          If you use the app outside your home country, data sent to your LLM provider may be processed in the
+          United States or other countries where that provider's infrastructure operates, as described in their
+          respective privacy policies.
+        </p>
+
+        <h2>Changes to this policy</h2>
+        <p>
+          We may update this page to reflect product, legal, or App Store requirements. The
+          <strong>Last updated</strong> date at the top will change when we do; continued use of the app after
+          changes means you accept the updated policy.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          For questions about this policy or the app's privacy practices, open an issue in the public
+          repository:
+          <a href="https://github.com/vilaverdeapps/patter">vilaverdeapps/patter</a>.
+        </p>
+
+        <h2>Your privacy choices</h2>
+        <ul>
+          <li>
+            <strong>iOS:</strong> <strong>Settings → Privacy &amp; Security → Tracking</strong> — control
+            whether apps may ask to track you across other companies' apps and websites (see
+            <a href="https://support.apple.com/102483">Apple's support</a>).
+          </li>
+          <li>
+            <strong>API key management:</strong> You can view or remove your API key at any time in the app's
+            Settings screen. The key is stored in the iOS Keychain and cannot be exported from the app.
+          </li>
+        </ul>
+
+        <p>
+          <em>This page is provided for the <strong>Privacy Policy URL</strong> field in App Store Connect.
+          Repository: <a href="https://github.com/vilaverdeapps/patter">vilaverdeapps/patter</a>.</em>
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__links">
+        <a href="/patter/MARKETING.html">Home</a>
+        <a href="/patter/SUPPORT.html">Support</a>
+      </div>
+      <p>© Patter. See <a href="/patter/MARKETING.html">home</a> for product overview.</p>
+    </footer>
+  </body>
+</html>
