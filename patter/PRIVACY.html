@@ -54,6 +54,10 @@
           need an account, and there is no developer-owned server or cloud service running behind the app.
         </p>
         <p>
+          When you choose to sign in with your Google account, additional data is collected from Google and used
+          to authenticate requests to Google's AI services. This policy describes that data collection below.
+        </p>
+        <p>
           If anything here conflicts with <strong>Apple's in-app labels</strong> in App Store Connect or on the
           App Store product page, the <strong>store listing</strong> and <strong>system permission
           dialogs</strong> control for required disclosures.
@@ -75,9 +79,18 @@
             UserDefaults, or logs.
           </li>
           <li>
+            When you sign in with your Google account, your <strong>email address</strong> and <strong>OAuth tokens</strong>
+            are collected from Google and stored securely in the iOS Keychain for authentication with Google's AI services.
+          </li>
+          <li>
             When you send a message in a chat, your text (along with recent conversation history and system prompts)
             is sent <strong>directly from your device</strong> to the API of the provider whose key you configured.
             That provider's own privacy policy governs how they process that data.
+          </li>
+          <li>
+            The app uses <strong>retrieval/memory features</strong> (via Google Gemini) to allow AI personas to remember
+            prior conversations across sessions, enabling a continuous language-learning experience. This data is processed
+            by Google's Gemini API and governed by their terms.
           </li>
           <li>
             The app uses <strong>local notifications</strong> (proactive pings) to remind you to practice. These are
@@ -135,6 +148,33 @@
           </li>
         </ul>
 
+        <h3>Google account data (when you sign in with Google)</h3>
+        <ul>
+          <li>
+            <strong>What:</strong> When you choose to sign in with your Google account, the app uses OAuth 2.0 /
+            OpenID Connect to authenticate you with Google. This provides:
+            <ul style="margin-top: 0.25em;">
+              <li>Your <strong>email address</strong> (displayed in-app for identification)</li>
+              <li><strong>Access and refresh tokens</strong> stored securely in the iOS Keychain to authenticate requests to Google's Gemini AI API, including the retrieval/memory features that allow personas to remember prior conversations</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Where:</strong> Your email address is obtained from your Google ID token. Tokens are stored
+            exclusively in the iOS Keychain — they are never written to SwiftData, UserDefaults, files, or logs.
+          </li>
+          <li>
+            <strong>Purpose:</strong> Authentication and authorization for Gemini API access. The email address is
+            used only for user identification within the app. Tokens enable the app to use Google's AI services for
+            conversation responses and persistent memory stores (via the Gemini retrieval feature) that allow AI
+            personas to maintain context across sessions — a core language-learning functionality.
+          </li>
+          <li>
+            <strong>Your control:</strong> You can sign out at any time in the app's Settings screen. Signing out
+            deletes all stored tokens from the Keychain and removes your locally stored conversation data from
+            SwiftData. Your Google account remains unaffected.
+          </li>
+        </ul>
+
         <h3>iCloud sync (opt-in, future feature)</h3>
         <ul>
           <li>
@@ -158,8 +198,14 @@
         <h2>Data retention</h2>
         <p>
           All conversation data and settings remain on your device until you delete them in the app or remove the
-          app. API keys stored in the Keychain persist until you remove the app or clear Keychain entries via iOS
-          Settings. There is no server-side data to request deletion of.
+          app. API keys and OAuth tokens stored in the Keychain persist until you sign out (which clears all tokens)
+          or remove the app. There is no server-side data to request deletion of.
+        </p>
+        <p>
+          When you sign out, the app deletes all locally stored conversation data from SwiftData and removes all
+          OAuth tokens from the Keychain. Your Google account and any data held in Google's Gemini API memory stores
+          associated with your Google account can be managed through your
+          <a href="https://myaccount.google.com/">Google Account settings</a>.
         </p>
 
         <h2>Children</h2>
@@ -173,6 +219,14 @@
           If you use the app outside your home country, data sent to your LLM provider may be processed in the
           United States or other countries where that provider's infrastructure operates, as described in their
           respective privacy policies.
+        </p>
+
+        <h2>Consent</h2>
+        <p>
+          By choosing to sign in with your Google account, you consent to the collection and storage of your email
+          address and OAuth tokens as described above. You will be presented with an explicit consent prompt before
+          your Google account is linked to the app. If you do not wish to provide this data, you may still use the app
+          by configuring a manual API key instead of signing in with Google.
         </p>
 
         <h2>Changes to this policy</h2>
