@@ -45,7 +45,7 @@
       <article>
         <header>
           <h1>Patter — Privacy Policy</h1>
-          <p><strong>Last updated:</strong> 22 April 2026</p>
+          <p><strong>Last updated:</strong> 3 May 2026</p>
         </header>
 
         <p>
@@ -186,6 +186,111 @@
             data is accessible to the app developer beyond what iCloud provides for your personal container.
           </li>
         </ul>
+
+        <h2>Sharing and disclosure of Google user data</h2>
+        <p>
+          When you sign in with Google, the app obtains your email address and OAuth tokens (access token and
+          refresh token) from Google's OAuth 2.0 / OpenID Connect flow. The table below states precisely with
+          whom each piece of Google user data is shared, transferred, or disclosed, and why.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Shared with</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Email address</td>
+              <td><strong>Google LLC</strong> (Gemini API)</td>
+              <td>Identifying your Gemini API session; displayed in-app so you can see which account is signed in.</td>
+            </tr>
+            <tr>
+              <td>OAuth access token</td>
+              <td><strong>Google LLC</strong> (Gemini API)</td>
+              <td>Authorising text-chat requests and retrieval/memory operations sent directly from your device to Google's Gemini API.</td>
+            </tr>
+            <tr>
+              <td>OAuth refresh token</td>
+              <td><strong>Google LLC</strong> (Google OAuth 2.0 token endpoint)</td>
+              <td>Silently obtaining a new access token when the current one expires, so you remain signed in without re-authenticating manually.</td>
+            </tr>
+            <tr>
+              <td>Chat messages (text only)</td>
+              <td><strong>Google LLC</strong> (Gemini API)</td>
+              <td>Processing your language-learning conversation and generating AI responses. Messages are sent directly from your device; no copy is retained by the app developer.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          <strong>No other sharing.</strong> Google user data is never sold, rented, shared with advertisers,
+          or disclosed to any third party other than Google LLC as described above. The app developer does not
+          operate any server that receives, stores, or processes Google user data — all network traffic goes
+          directly from your device to Google's APIs over HTTPS.
+        </p>
+        <p>
+          Google's use of the data it receives is governed by
+          <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google's Privacy Policy</a> and,
+          for Gemini API usage, the
+          <a href="https://ai.google.dev/gemini-api/terms" rel="noopener noreferrer">Gemini API Additional Terms of Service</a>.
+        </p>
+
+        <h2>Data security and protection mechanisms</h2>
+        <p>
+          Patter applies the following technical safeguards to protect Google user data (email address and
+          OAuth tokens) against unauthorised access, disclosure, alteration, or destruction.
+        </p>
+
+        <h3>iOS Keychain storage</h3>
+        <p>
+          All sensitive credentials — OAuth access tokens, refresh tokens, and your email address — are stored
+          exclusively in the <strong>iOS Keychain</strong> using Apple's
+          <a href="https://developer.apple.com/documentation/security/keychain_services" rel="noopener noreferrer">Keychain Services API</a>
+          with the <code>kSecAttrAccessibleAfterFirstUnlock</code> protection class. The Keychain is encrypted
+          by iOS using hardware-backed AES encryption and is isolated per app by the operating system's sandbox.
+          No other app on your device can read Patter's Keychain items.
+        </p>
+
+        <h3>No server-side storage</h3>
+        <p>
+          The app developer operates no server, database, or cloud storage that holds Google user data.
+          Because data never leaves your device destined for a developer-owned system, there is no server-side
+          attack surface.
+        </p>
+
+        <h3>Encrypted transport (TLS)</h3>
+        <p>
+          All network requests — to Google's OAuth endpoints and to the Gemini API — are made over
+          <strong>HTTPS with TLS 1.2 or higher</strong>, enforced by iOS App Transport Security (ATS).
+          This protects your tokens and chat messages in transit against interception.
+        </p>
+
+        <h3>Minimal data collection</h3>
+        <p>
+          The app requests only the OAuth scopes required to call the Gemini API on your behalf. No additional
+          Google account data (name, profile picture, contacts, calendar, etc.) is requested or stored.
+        </p>
+
+        <h3>Token lifecycle management</h3>
+        <ul>
+          <li>
+            <strong>Sign-out clears all credentials.</strong> When you sign out via Settings, the app immediately
+            deletes all OAuth tokens and your email address from the Keychain. No credentials linger on the device.
+          </li>
+          <li>
+            <strong>App deletion clears all credentials.</strong> Removing the app from your device deletes its
+            Keychain items, subject to standard iOS Keychain behaviour.
+          </li>
+        </ul>
+
+        <h3>No logging of sensitive data</h3>
+        <p>
+          OAuth tokens and your email address are never written to log files, console output, crash reports,
+          SwiftData, or UserDefaults. The app contains no analytics or crash-reporting SDK that could
+          inadvertently capture this data.
+        </p>
 
         <h2>No advertising or analytics SDKs</h2>
         <p>
