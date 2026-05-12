@@ -1,52 +1,106 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Privacy Policy — Patter</title>
-    <meta
-      name="description"
-      content="How Patter handles information on iPhone: local conversations via SwiftData, your own API key in the Keychain, no developer server."
-    />
-    <link rel="canonical" href="https://vilaverdeapps.github.io/patter/PRIVACY.html" />
-    <meta name="robots" content="index,follow" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Patter</title>
+  <meta name="description" content="How Patter handles information on iPhone: local conversations via SwiftData, your own API key in the Keychain, no developer server." />
+  <link rel="canonical" href="https://vilaverdeapps.github.io/patter/PRIVACY.html" />
+  <meta name="robots" content="index,follow" />
 
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Privacy Policy — Patter" />
-    <meta
-      property="og:description"
-      content="Patter is a serverless language-learning app. Conversations stay on your device; API keys are stored in the iOS Keychain."
-    />
-    <meta property="og:url" content="https://vilaverdeapps.github.io/patter/PRIVACY.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Privacy Policy — Patter" />
+  <meta property="og:description" content="Patter is a serverless language-learning app. Conversations stay on your device; API keys are stored in the iOS Keychain." />
+  <meta property="og:url" content="https://vilaverdeapps.github.io/patter/PRIVACY.html" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/assets/styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="site-header__inner">
-        <p class="site-title"><a href="/patter/MARKETING.html">Patter</a></p>
-        <nav class="nav" aria-label="Primary">
-          <a href="/patter/MARKETING.html">Home</a>
-          <a href="/patter/SUPPORT.html">Support</a>
-          <a href="#app-store-placeholder">App Store</a>
-        </nav>
-      </div>
-    </header>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <main id="main" class="prose">
-      <a class="back-link" href="/patter/MARKETING.html">← Back to home</a>
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --bg-alt: #ece4d5;
+      --ink: #1f1a14;
+      --ink-soft: #5a4a38;
+      --ink-muted: #8a7a64;
+      --accent: #FF6A3D;
+      --line: rgba(31,26,20,0.12);
+      --serif: 'Newsreader', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --mono: 'Geist Mono', ui-monospace, monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); overflow-x: hidden; }
+
+    /* Skip link */
+    .skip-link { position: absolute; top: -999px; left: 0; padding: 8px 16px; background: var(--ink); color: #fff; font-family: var(--sans); font-size: 14px; text-decoration: none; z-index: 100; }
+    .skip-link:focus { top: 0; }
+
+    /* Nav */
+    .pc-nav { display: flex; align-items: center; justify-content: space-between; padding: 24px 56px; border-bottom: 1px solid var(--line); }
+    .pc-nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+    .pc-nav-logo img { width: 32px; height: 32px; border-radius: 8px; display: block; }
+    .pc-nav-logo-name { font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: -0.3px; }
+    .pc-nav-links { display: flex; align-items: center; gap: 32px; font-family: var(--sans); font-size: 13.5px; color: var(--ink-soft); }
+    .pc-nav-links a { text-decoration: none; color: inherit; }
+    .pc-nav-links a:hover { color: var(--ink); }
+    .pc-nav-cta { font-family: var(--sans); font-size: 13px; font-weight: 600; color: #fff !important; background: var(--ink); padding: 9px 16px; border-radius: 999px; white-space: nowrap; }
+
+    /* Prose */
+    .pc-prose-wrap { max-width: 800px; margin: 0 auto; padding: 64px 56px 96px; }
+    .pc-back { display: inline-block; font-family: var(--sans); font-size: 13px; color: var(--ink-muted); text-decoration: none; margin-bottom: 48px; }
+    .pc-back:hover { color: var(--ink); }
+    .pc-prose-wrap h1 { font-family: var(--serif); font-size: 52px; font-weight: 400; letter-spacing: -1.2px; line-height: 1.0; margin: 0 0 12px; color: var(--ink); }
+    .pc-prose-wrap .meta { font-family: var(--sans); font-size: 14px; color: var(--ink-muted); margin: 0 0 48px; }
+    .pc-prose-wrap h2 { font-family: var(--serif); font-size: 30px; font-weight: 500; letter-spacing: -0.5px; margin: 52px 0 16px; color: var(--ink); }
+    .pc-prose-wrap h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; margin: 36px 0 12px; color: var(--ink); }
+    .pc-prose-wrap p { font-family: var(--serif); font-size: 17px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 20px; }
+    .pc-prose-wrap li { font-family: var(--serif); font-size: 17px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 10px; }
+    .pc-prose-wrap ul, .pc-prose-wrap ol { padding-left: 1.5em; margin: 0 0 20px; }
+    .pc-prose-wrap strong { color: var(--ink); }
+    .pc-prose-wrap a { color: var(--accent); }
+    .pc-prose-wrap hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .pc-prose-wrap em { font-style: italic; }
+    .pc-prose-wrap code { font-family: var(--mono); font-size: 14px; background: var(--bg-alt); padding: 2px 5px; border-radius: 4px; }
+    .pc-prose-wrap table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-family: var(--sans); font-size: 14px; }
+    .pc-prose-wrap th { text-align: left; font-weight: 600; color: var(--ink); padding: 10px 14px; border-bottom: 2px solid var(--line); }
+    .pc-prose-wrap td { padding: 10px 14px; border-bottom: 1px solid var(--line); color: var(--ink-soft); vertical-align: top; }
+    .pc-prose-wrap tr:last-child td { border-bottom: none; }
+
+    /* Footer */
+    .pc-footer { padding: 48px 56px; background: var(--bg); border-top: 1px solid var(--line); }
+    .pc-footer-inner { max-width: 1280px; margin: 0 auto; }
+    .pc-footer-links { display: flex; gap: 24px; margin-bottom: 12px; }
+    .pc-footer-links a { font-family: var(--sans); font-size: 12.5px; color: var(--ink-muted); text-decoration: none; }
+    .pc-footer-links a:hover { color: var(--ink); }
+    .pc-footer-copy { font-family: var(--sans); font-size: 12.5px; color: var(--ink-muted); margin: 0 0 8px; }
+    .pc-footer-legal { font-family: var(--sans); font-size: 11px; color: var(--ink-muted); line-height: 1.7; margin: 0; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="pc-nav" aria-label="Primary">
+    <a class="pc-nav-logo" href="/patter/MARKETING.html">
+      <img src="/assets/patter-icon.png" alt="" />
+      <span class="pc-nav-logo-name">Patter</span>
+    </a>
+    <div class="pc-nav-links">
+      <a href="/patter/MARKETING.html#features">Features</a>
+      <a href="/patter/MARKETING.html#languages">Languages</a>
+      <a href="/patter/PRIVACY.html">Privacy</a>
+      <a href="/patter/SUPPORT.html">Support</a>
+      <a class="pc-nav-cta" href="https://apps.apple.com/us/app/patter-language-learning/id6762643113">Get the app</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="pc-prose-wrap">
+      <a class="pc-back" href="/patter/MARKETING.html">← Back to home</a>
       <article>
-        <header>
-          <h1>Patter — Privacy Policy</h1>
-          <p><strong>Last updated:</strong> 3 May 2026</p>
-        </header>
+        <h1>Privacy Policy</h1>
+        <p class="meta"><strong>Last updated:</strong> 3 May 2026</p>
 
         <p>
           This policy describes how <strong>Patter</strong> ("the app") handles information when you use it on
@@ -118,9 +172,7 @@
 
         <h3>API key (stored in Keychain)</h3>
         <ul>
-          <li>
-            <strong>What:</strong> Your personal API key for an LLM provider.
-          </li>
+          <li><strong>What:</strong> Your personal API key for an LLM provider.</li>
           <li>
             <strong>Where:</strong> Stored exclusively in the iOS Keychain using standard secure-storage APIs. The
             key is never stored in SwiftData, UserDefaults, files, or logs.
@@ -168,7 +220,7 @@
             conversation responses and persistent memory stores (via the Gemini retrieval feature) that allow AI
             personas to maintain context across sessions — a core language-learning functionality.
 
-            We do not use Google user data for any purposes other than providing the specific AI-driven language 
+            We do not use Google user data for any purposes other than providing the specific AI-driven language
             learning features and persistent memory functionality requested by the user within the app.
           </li>
           <li>
@@ -228,7 +280,7 @@
           </tbody>
         </table>
         <p>
-          Patter's use and transfer to any other app of information received from Google APIs will adhere to the 
+          Patter's use and transfer to any other app of information received from Google APIs will adhere to the
           <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including
           the <strong>Limited Use</strong> requirements.
         </p>
@@ -352,8 +404,7 @@
         <h2>Contact</h2>
         <p>
           For questions about this policy or the app's privacy practices, open an issue in the public
-          repository:
-          <a href="https://github.com/vilaverdeapps/patter">vilaverdeapps/patter</a>.
+          repository: <a href="https://github.com/vilaverdeapps/patter">vilaverdeapps/patter</a>.
         </p>
 
         <h2>Your privacy choices</h2>
@@ -374,21 +425,27 @@
           Repository: <a href="https://github.com/vilaverdeapps/patter">vilaverdeapps/patter</a>.</em>
         </p>
       </article>
-    </main>
+    </div>
+  </main>
 
-    <footer class="site-footer">
-      <div class="site-footer__links">
+  <footer class="pc-footer">
+    <div class="pc-footer-inner">
+      <div class="pc-footer-links">
         <a href="/patter/MARKETING.html">Home</a>
+        <a href="/patter/PRIVACY.html">Privacy</a>
         <a href="/patter/SUPPORT.html">Support</a>
+        <a href="https://github.com/vilaverdeapps/patter" rel="noopener noreferrer">GitHub</a>
       </div>
-      <p>© Patter — vilaverdeapps. See <a href="/patter/MARKETING.html">home</a> for product overview.</p>
-      <p class="site-footer__legal">
+      <p class="pc-footer-copy">© 2026 vilaverdeapps — independent software from somewhere quiet.</p>
+      <p class="pc-footer-legal">
+        Patter is developed by vilaverdeapps and is not affiliated with, endorsed by, or sponsored by any third-party service referenced on this page.
         Google and Gemini are trademarks of Google LLC.
         OpenAI is a trademark of OpenAI, L.L.C.
         Anthropic and Claude are trademarks of Anthropic, PBC.
         Apple, App Store, iPhone, and iOS are trademarks of Apple Inc., registered in the U.S. and other countries.
-        Patter is not affiliated with or endorsed by any of the above.
+        Use of these names is solely to identify compatible services.
       </p>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
 </html>

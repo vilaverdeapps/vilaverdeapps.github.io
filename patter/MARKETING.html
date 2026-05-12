@@ -1,195 +1,489 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Patter — AI language learning that feels like texting</title>
-    <meta
-      name="description"
-      content="Patter is a serverless iOS language-learning app. Chat with AI personas who stay in character, get real-time grammar corrections, and learn at your level — all in an iMessage-inspired interface."
-    />
-    <link rel="canonical" href="https://vilaverdeapps.github.io/patter/MARKETING.html" />
-    <meta name="robots" content="index,follow" />
-    <meta name="author" content="vilaverdeapps" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patter — Language learning that feels like texting a friend</title>
+  <meta name="description" content="Patter is a serverless iOS language-learning app. Text AI personas who stay in character and only reply in your target language. Inline corrections, tap-to-translate, no account, no subscription." />
+  <link rel="canonical" href="https://vilaverdeapps.github.io/patter/MARKETING.html" />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="vilaverdeapps" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Patter" />
-    <meta property="og:title" content="Patter — AI language learning that feels like texting" />
-    <meta
-      property="og:description"
-      content="Chat with AI personas, get real-time grammar corrections, and learn at your level. Serverless, BYOK, no account required."
-    />
-    <meta property="og:url" content="https://vilaverdeapps.github.io/patter/MARKETING.html" />
-    <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Patter" />
+  <meta property="og:title" content="Patter — Language learning that feels like texting a friend" />
+  <meta property="og:description" content="Chat with AI personas, get real-time grammar corrections, and learn at your level. Serverless, BYOK, no account required." />
+  <meta property="og:url" content="https://vilaverdeapps.github.io/patter/MARKETING.html" />
+  <meta property="og:locale" content="en_US" />
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Patter — AI language learning that feels like texting" />
-    <meta
-      name="twitter:description"
-      content="Chat with AI personas, get real-time grammar corrections. Serverless iOS app — bring your own API key."
-    />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Patter — Language learning that feels like texting a friend" />
+  <meta name="twitter:description" content="Chat with AI personas, get real-time grammar corrections. Serverless iOS app — bring your own API key." />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "Patter",
-        "operatingSystem": "iOS 17",
-        "applicationCategory": "EducationApplication",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "description": "Serverless iOS language-learning app. Chat with AI personas who stay in character, get real-time grammar corrections, and learn at your CEFR level — all in an iMessage-inspired interface. Bring your own API key.",
-        "author": {
-          "@type": "Organization",
-          "name": "vilaverdeapps"
-        }
-      }
-    </script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="site-header__inner">
-        <p class="site-title"><a href="/patter/MARKETING.html">Patter</a></p>
-        <nav class="nav" aria-label="Primary">
-          <a href="#features">Features</a>
-          <a href="/patter/PRIVACY.html">Privacy</a>
-          <a href="/patter/SUPPORT.html">Support</a>
-          <a href="#app-store-placeholder">App Store</a>
-        </nav>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Patter",
+    "operatingSystem": "iOS 18.6",
+    "applicationCategory": "EducationApplication",
+    "offers": { "@type": "Offer", "priceCurrency": "USD" },
+    "description": "Serverless iOS language-learning app. Chat with AI personas who stay in character, get real-time grammar corrections, and learn at your CEFR level. Bring your own API key.",
+    "author": { "@type": "Organization", "name": "vilaverdeapps" }
+  }
+  </script>
+
+  <style>
+    html, body { margin: 0; padding: 0; background: #f5f0e8; font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { overflow-x: hidden; }
+    a { color: inherit; }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel">
+const PC = {
+  bg: '#f5f0e8',
+  bgAlt: '#ece4d5',
+  ink: '#1f1a14',
+  inkSoft: '#5a4a38',
+  inkMuted: '#8a7a64',
+  accent: '#FF6A3D',
+  sun: '#E85D75',
+  forest: '#3D8B6E',
+  ocean: '#3D7AE8',
+  line: 'rgba(31,26,20,0.12)',
+  serif: '"Newsreader", "Source Serif Pro", Georgia, serif',
+  sans: '"Inter", system-ui, sans-serif',
+  mono: '"Geist Mono", ui-monospace, monospace',
+};
+
+const CONVERSATIONS = {
+  pt_pt: {
+    persona: { name: 'Sofia Mendes' },
+    messages: [
+      { from: 'ai', text: 'Por favor, não te preocupes! Quando regressares, contas-me tudo sobre a Roménia e os planos de Sintra.' },
+      { from: 'me', text: 'Nunca tive os pastéis do Raleigh. Onde está pastelaria fica?',
+        dica: { wrong: 'Onde está pastelaria fica?', right: 'Onde fica a pastelaria?', note: 'Use "fica" with a location — and don\'t forget the article "a".' } },
+      { from: 'ai', text: 'A pastelaria Raleigh fica na Rua do Norte, 42, bem perto da estação de comboios. Já foste lá antes?' },
+    ]
+  },
+  ja: {
+    persona: { name: 'Haruki' },
+    messages: [
+      { from: 'ai', text: 'おはよう！今日は何してるの？' },
+      { from: 'me', text: '友達とラーメン食べに行く',
+        dica: { wrong: '友達と', right: '友達とラーメンを食べに', note: 'Particle を marks the direct object (ramen).' } },
+      { from: 'ai', text: 'いいなあ！どこのラーメン屋？' },
+    ]
+  },
+  es_es: {
+    persona: { name: 'Mateo' },
+    messages: [
+      { from: 'ai', text: '¿Qué tal el café de esta mañana?' },
+      { from: 'me', text: 'Muy bueno, gracias. Tomé un cortado' },
+      { from: 'ai', text: '¡Cortado, muy español! ¿Y qué planes tienes hoy?' },
+      { from: 'me', text: 'Voy a la museo del Prado',
+        dica: { wrong: 'a la museo', right: 'al museo', note: '"Museo" is masculine — use "al" (a + el).' } },
+    ]
+  },
+  fr: {
+    persona: { name: 'Camille' },
+    messages: [
+      { from: 'ai', text: 'Tu viens déjeuner avec nous ?' },
+      { from: 'me', text: "Oui, j'ai très faim" },
+      { from: 'ai', text: 'On va chez Paul, le bistrot du coin. Bouchon lyonnais.' },
+      { from: 'me', text: "Je connais pas. C'est quoi un bouchon ?",
+        dica: { wrong: 'Je connais pas', right: 'Je ne le connais pas', note: 'Spoken French often drops "ne" — fine casually, but the full form is more polished.' } },
+    ]
+  },
+  it: {
+    persona: { name: 'Giulia' },
+    messages: [
+      { from: 'ai', text: 'Allora, hai provato il ragù?' },
+      { from: 'me', text: 'Sì! Era buonissimo' },
+      { from: 'ai', text: 'Bravissimo! Qui a Bologna è una religione.' },
+      { from: 'me', text: 'Ho mangiato troppo pasta',
+        dica: { wrong: 'troppo pasta', right: 'troppa pasta', note: '"Pasta" is feminine — "troppa" agrees in gender.' } },
+    ]
+  },
+};
+
+const PERSONAS = [
+  { name: 'Inês',   emoji: '🌊', lang: 'pt-PT' },
+  { name: 'Haruki', emoji: '🍜', lang: 'ja-JP' },
+  { name: 'Mateo',  emoji: '☕', lang: 'es-ES' },
+  { name: 'Camille',emoji: '🥐', lang: 'fr-FR' },
+  { name: 'Giulia', emoji: '🍝', lang: 'it-IT' },
+];
+
+const LANGUAGES = [
+  { name: 'English',    dialects: ['US', 'GB'],                      flag: '🇺🇸', sample: "Hey, how's it going?" },
+  { name: 'Spanish',    dialects: ['Castilian', 'Latin American'],   flag: '🇪🇸', sample: '¿Qué tal?' },
+  { name: 'Portuguese', dialects: ['European', 'Brazilian'],         flag: '🇵🇹', sample: 'Tudo bem?' },
+  { name: 'French',     dialects: ['France', 'Canadian'],            flag: '🇫🇷', sample: 'Ça va?' },
+  { name: 'German',     dialects: [],                                flag: '🇩🇪', sample: "Wie geht's?" },
+  { name: 'Italian',    dialects: [],                                flag: '🇮🇹', sample: 'Come stai?' },
+  { name: 'Japanese',   dialects: [],                                flag: '🇯🇵', sample: '元気？' },
+  { name: 'Mandarin',   dialects: [],                                flag: '🇨🇳', sample: '你好吗？' },
+  { name: 'Korean',     dialects: [],                                flag: '🇰🇷', sample: '잘 지내?' },
+  { name: 'Russian',    dialects: [],                                flag: '🇷🇺', sample: 'Как дела?' },
+  { name: 'Romanian',   dialects: [],                                flag: '🇷🇴', sample: 'Ce mai faci?' },
+];
+
+function ChatBubble({ from, text, dica, accent = '#FF6A3D', muted = '#2c2c2e', mutedText = '#fff', accentText = '#fff', size = 'md', showDica = true }) {
+  const isMe = from === 'me';
+  const s = { sm: { fs: 13, pad: '9px 14px', radius: 22, gap: 6 }, md: { fs: 15, pad: '11px 16px', radius: 24, gap: 7 } }[size] || { fs: 15, pad: '11px 16px', radius: 24, gap: 7 };
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: isMe ? 'flex-end' : 'flex-start', gap: 3, marginBottom: s.gap }}>
+      <div style={{ background: isMe ? accent : muted, color: isMe ? accentText : mutedText, padding: s.pad, borderRadius: s.radius, maxWidth: '78%', fontSize: s.fs, lineHeight: 1.32, wordBreak: 'break-word' }}>
+        {text}
       </div>
-    </header>
+      {showDica && dica && isMe && (
+        <div style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 11, fontFamily: 'Inter, system-ui', color: '#5ac8fa', marginTop: 2, marginRight: 4 }}>
+          <span>✨</span><span style={{ fontWeight: 500 }}>Correcção de IA</span>
+        </div>
+      )}
+    </div>
+  );
+}
 
-    <main id="main">
-      <article>
-        <header class="hero">
-          <h1>Patter</h1>
-          <p class="hero__lede">
-            Language learning that feels like texting a friend. Chat with AI personas who stay in character,
-            correct your grammar in real time, and adapt to your level — all without an account or a server.
+function PhoneFrame({ children, width = 320, height = 660 }) {
+  return (
+    <div style={{ width, height, background: '#1a1a1a', borderRadius: 44, padding: 10, boxShadow: '0 30px 80px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.06) inset', position: 'relative' }}>
+      <div style={{ width: '100%', height: '100%', background: '#000', borderRadius: 34, overflow: 'hidden', position: 'relative' }}>
+        <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', width: 96, height: 26, background: '#0a0a0a', borderRadius: 14, zIndex: 10 }} />
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function ChatThread({ convo = 'pt_pt', accent = '#FF6A3D', mutedBubble = '#2c2c2e', showDica = true }) {
+  const c = CONVERSATIONS[convo];
+  if (!c) return null;
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', height: '100%', background: '#000', color: '#fff' }}>
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 44, display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 24px 0', fontSize: 13, fontWeight: 600, color: '#fff', fontFamily: '-apple-system, BlinkMacSystemFont, system-ui', zIndex: 5 }}>
+        <span>11:37</span><span style={{ fontSize: 11, opacity: 0.9 }}>•••▸ －｢ 80</span>
+      </div>
+      <div style={{ paddingTop: 52, paddingBottom: 10, paddingLeft: 12, paddingRight: 12, display: 'flex', alignItems: 'center', gap: 8, background: '#000' }}>
+        <div style={{ width: 32, height: 32, borderRadius: '50%', background: '#1c1c1e', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: 14 }}>‹</div>
+        <div style={{ flex: 1, textAlign: 'center', fontSize: 15, fontWeight: 600, fontFamily: 'Inter, system-ui' }}>{c.persona.name}</div>
+        <div style={{ width: 32, height: 32, borderRadius: '50%', background: '#1c1c1e', display: 'flex', alignItems: 'center', justifyContent: 'center', color: accent, fontSize: 14 }}>▱</div>
+      </div>
+      <div style={{ flex: 1, padding: '4px 12px 8px', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+        {c.messages.map((m, i) => (
+          <ChatBubble key={i} from={m.from} text={m.text} dica={m.dica} accent={accent} muted={mutedBubble} mutedText="#fff" size="sm" showDica={showDica} />
+        ))}
+      </div>
+      <div style={{ padding: '8px 12px 6px', display: 'flex', alignItems: 'center', gap: 8, background: '#000' }}>
+        <div style={{ flex: 1, height: 34, borderRadius: 17, background: '#1c1c1e', display: 'flex', alignItems: 'center', padding: '0 14px', fontSize: 12, color: '#8e8e93', fontFamily: 'Inter, system-ui' }}>Mensagem…</div>
+        <div style={{ width: 34, height: 34, borderRadius: '50%', background: '#2c2c2e', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: 14, fontWeight: 700 }}>↑</div>
+      </div>
+      <div style={{ textAlign: 'center', fontSize: 9.5, color: '#8e8e93', fontFamily: 'Inter, system-ui', paddingBottom: 14 }}>Patter é IA e pode cometer erros</div>
+    </div>
+  );
+}
+
+function PCBadge({ children, color = PC.accent }) {
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap', fontFamily: PC.mono, fontSize: 11, color, letterSpacing: 1, textTransform: 'uppercase', padding: '5px 10px', border: `1px solid ${color}40`, borderRadius: 999, background: `${color}0c` }}>{children}</span>
+  );
+}
+
+function PCNav({ accent = PC.accent }) {
+  return (
+    <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '24px 56px', borderBottom: `1px solid ${PC.line}` }}>
+      <a href="/patter/MARKETING.html" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+        <img src="/assets/patter-icon.png" alt="" style={{ width: 32, height: 32, borderRadius: 8, display: 'block' }} />
+        <span style={{ fontFamily: PC.serif, fontSize: 21, fontWeight: 500, color: PC.ink, letterSpacing: -0.3 }}>Patter</span>
+      </a>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 32, fontFamily: PC.sans, fontSize: 13.5, color: PC.inkSoft }}>
+        <a href="#features" style={{ color: 'inherit', textDecoration: 'none' }}>Features</a>
+        <a href="#languages" style={{ color: 'inherit', textDecoration: 'none' }}>Languages</a>
+        <a href="/patter/PRIVACY.html" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy</a>
+        <a href="/patter/SUPPORT.html" style={{ color: 'inherit', textDecoration: 'none' }}>Support</a>
+        <a href="https://apps.apple.com/us/app/patter-language-learning/id6762643113" style={{ fontFamily: PC.sans, fontSize: 13, fontWeight: 600, color: '#fff', background: PC.ink, padding: '9px 16px', borderRadius: 999, textDecoration: 'none', whiteSpace: 'nowrap' }}>Get the app</a>
+      </div>
+    </nav>
+  );
+}
+
+function PCHero({ accent = PC.accent, convo = 'pt_pt' }) {
+  return (
+    <section style={{ padding: '64px 56px 80px', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ position: 'absolute', top: 80, right: 80, width: 120, height: 140, background: `repeating-linear-gradient(45deg, ${accent}18, ${accent}18 6px, transparent 6px, transparent 12px)`, borderRadius: 6, transform: 'rotate(8deg)', opacity: 0.6 }} />
+      <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 64, alignItems: 'center', maxWidth: 1280 }}>
+        <div>
+          <PCBadge>Now on the App Store · iOS 18.6+</PCBadge>
+          <h1 style={{ fontFamily: PC.serif, fontSize: 86, lineHeight: 0.98, letterSpacing: -2.2, color: PC.ink, margin: '28px 0 24px', fontWeight: 400 }}>
+            Like texting<br />
+            <span style={{ fontStyle: 'italic', color: accent }}>a friend</span> who<br />
+            speaks the language<br />
+            you're learning.
+          </h1>
+          <p style={{ fontFamily: PC.serif, fontSize: 21, lineHeight: 1.5, color: PC.inkSoft, margin: '0 0 36px', maxWidth: 520, fontWeight: 400 }}>
+            Patter is a quiet little iOS app. Chat with AI personas — a shopkeeper in Lisbon,
+            a friend in Tokyo — who stay in character and reply only in your target language.
+            Corrections appear as you go.
           </p>
-          <div class="hero__actions">
-            <a
-              class="btn"
-              href="#app-store-placeholder"
-              rel="noopener noreferrer"
-            >
-              Download on the App Store
+          <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+            <a href="https://apps.apple.com/us/app/patter-language-learning/id6762643113" style={{ fontFamily: PC.sans, fontSize: 15, fontWeight: 600, color: '#fff', background: PC.ink, padding: '14px 24px', borderRadius: 999, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap' }}>
+              <span style={{ fontSize: 18 }}>↓</span> Download for iPhone
             </a>
-            <a class="btn btn--secondary" href="#how-it-works">How it works</a>
+            <a href="#how-it-works" style={{ fontFamily: PC.sans, fontSize: 14, fontWeight: 500, color: PC.ink, background: 'transparent', padding: '14px 18px', borderRadius: 999, border: `1px solid ${PC.line}`, textDecoration: 'none', whiteSpace: 'nowrap' }}>How it works →</a>
           </div>
-        </header>
-
-        <section id="how-it-works" aria-labelledby="how-heading">
-          <h2 id="how-heading">How it works</h2>
-          <div class="card">
-            <p>
-              Patter is <strong>serverless and BYOK</strong> (Bring Your Own Key). There is no developer backend —
-              your conversations live on your device, and all AI calls go directly from your phone to your chosen
-              LLM provider using your own API key stored in the iOS Keychain. Start a chat with an AI persona who
-              speaks only your target language, make mistakes, get corrected, and learn naturally.
-            </p>
+          <div style={{ marginTop: 48, display: 'flex', gap: 28, fontFamily: PC.sans, fontSize: 12.5, color: PC.inkMuted, flexWrap: 'wrap' }}>
+            <span style={{ whiteSpace: 'nowrap' }}>· 11 languages, dialect-aware</span>
+            <span style={{ whiteSpace: 'nowrap' }}>· No account</span>
+            <span style={{ whiteSpace: 'nowrap' }}>· Bring your own API key</span>
           </div>
-        </section>
-
-        <section id="features" aria-labelledby="features-heading">
-          <h2 id="features-heading">Highlights</h2>
-          <div class="card">
-            <ul class="feature-list">
-              <li>
-                <strong>iMessage aesthetics</strong> — custom SwiftUI chat bubbles with asymmetric tail corners;
-                blue for you, gray for AI. Feels like texting a friend.
-              </li>
-              <li>
-                <strong>Real-time grammar corrections</strong> — collapsible correction banners appear below your
-                messages when you make a significant error, so you learn as you go.
-              </li>
-              <li>
-                <strong>Tap-to-translate</strong> — tap any message to flip it to your native language; long-press
-                individual words for gloss-level popovers.
-              </li>
-              <li>
-                <strong>AI personas</strong> — each contact has a name, emoji, backstory, tone, and interests;
-                generated once at creation time and they stay in character.
-              </li>
-              <li>
-                <strong>CEFR level selector</strong> — switch difficulty mid-conversation (A1–C1); the system
-                instruction rebuilds locally with no extra API call.
-              </li>
-              <li>
-                <strong>Proactive pings</strong> — local notifications simulate a contact starting a conversation
-                after you've been away, keeping your streak alive.
-              </li>
-              <li><strong>Daily goal &amp; streak</strong> — tracks consecutive days of practice; survives app reinstall.</li>
-              <li><strong>Zero server</strong> — no account, no cloud storage, no data leaves your device except to your LLM provider.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section aria-labelledby="languages-heading">
-          <h2 id="languages-heading">Supported languages</h2>
-          <div class="card">
-            <p>Patter supports 10 languages with dialect-specific rules:</p>
-            <ul class="feature-list" style="margin-top: 0.75rem;">
-              <li>English (US, GB)</li>
-              <li>Spanish (Castilian, Latin American)</li>
-              <li>Portuguese (European, Brazilian)</li>
-              <li>French (France, Canadian)</li>
-              <li>German</li>
-              <li>Italian</li>
-              <li>Japanese</li>
-              <li>Mandarin</li>
-              <li>Korean</li>
-              <li>Russian</li>
-            </ul>
-          </div>
-        </section>
-
-        <section aria-labelledby="get-heading">
-          <h2 id="get-heading">Get the app</h2>
-          <div class="card">
-            <p>
-              Patter is available on the App Store for iPhone (iOS 17 or later). You'll need your own API key from a supported provider (Google AI Studio, OpenAI, Anthropic).
-            </p>
-            <p style="margin-bottom: 0">
-              <a
-                class="btn"
-                href="#app-store-placeholder"
-                rel="noopener noreferrer"
-              >
-                Open in the App Store
-              </a>
-            </p>
-          </div>
-        </section>
-      </article>
-    </main>
-
-    <footer class="site-footer">
-      <div class="site-footer__links">
-        <a href="/patter/PRIVACY.html">Privacy policy</a>
-        <a href="/patter/SUPPORT.html">Support</a>
-        <a href="https://github.com/vilaverdeapps/patter" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+          <div style={{ position: 'absolute', width: 380, height: 520, background: PC.bgAlt, borderRadius: 18, transform: 'rotate(-4deg)', boxShadow: '0 20px 60px rgba(0,0,0,0.08)', border: `1px solid ${PC.line}` }} />
+          <PhoneFrame width={320} height={620}>
+            <ChatThread convo={convo} accent={accent} mutedBubble="#2c2c2e" showDica={true} />
+          </PhoneFrame>
+        </div>
       </div>
-      <p>Patter is developed by vilaverdeapps and is not affiliated with, endorsed by, or sponsored by any third-party service referenced on this page.</p>
-      <p class="site-footer__legal">
-        Google and Gemini are trademarks of Google LLC.
-        OpenAI is a trademark of OpenAI, L.L.C.
-        Anthropic and Claude are trademarks of Anthropic, PBC.
-        Apple, App Store, iPhone, and iOS are trademarks of Apple Inc., registered in the U.S. and other countries.
-        Use of these names is solely to identify compatible services.
-      </p>
+    </section>
+  );
+}
+
+function PCHowItWorks({ accent = PC.accent }) {
+  const steps = [
+    { n: '01', title: 'Pick a language', body: 'Eleven languages, with dialect precision. European or Brazilian Portuguese. Castilian or Latin American Spanish. You choose.' },
+    { n: '02', title: 'Create a contact', body: 'A persona — name, backstory, tone, interests. Inês runs a scarf shop in Lisbon. Haruki is your friend in Shibuya. They stay in character.' },
+    { n: '03', title: 'Text them', body: "They reply only in the language you're learning. When you slip, a quiet correction appears below your message. No drills. No tests." },
+  ];
+  return (
+    <section id="how-it-works" style={{ padding: '96px 56px', background: PC.bgAlt, borderTop: `1px solid ${PC.line}`, borderBottom: `1px solid ${PC.line}` }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+        <PCBadge color={PC.forest}>How it works</PCBadge>
+        <h2 style={{ fontFamily: PC.serif, fontSize: 56, lineHeight: 1, letterSpacing: -1.2, color: PC.ink, margin: '20px 0 56px', fontWeight: 400, maxWidth: 720 }}>
+          Three steps. <span style={{ fontStyle: 'italic', color: PC.inkSoft }}>Then it's just texting.</span>
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 48 }}>
+          {steps.map((s) => (
+            <div key={s.n}>
+              <div style={{ fontFamily: PC.mono, fontSize: 13, color: accent, letterSpacing: 1, marginBottom: 16 }}>{s.n}</div>
+              <div style={{ height: 1, background: PC.ink, marginBottom: 20, opacity: 0.85 }} />
+              <h3 style={{ fontFamily: PC.serif, fontSize: 28, fontWeight: 500, color: PC.ink, margin: '0 0 12px', letterSpacing: -0.5 }}>{s.title}</h3>
+              <p style={{ fontFamily: PC.serif, fontSize: 17, lineHeight: 1.5, color: PC.inkSoft, margin: 0 }}>{s.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PCFeatureCard({ kicker, title, body, accent, children }) {
+  return (
+    <div style={{ background: '#fff', border: `1px solid ${PC.line}`, borderRadius: 16, padding: 32, display: 'flex', flexDirection: 'column', gap: 16, minHeight: 320 }}>
+      <div style={{ fontFamily: PC.mono, fontSize: 11, letterSpacing: 1.2, color: accent, textTransform: 'uppercase' }}>{kicker}</div>
+      <h3 style={{ fontFamily: PC.serif, fontSize: 26, fontWeight: 500, color: PC.ink, margin: 0, letterSpacing: -0.4, lineHeight: 1.1 }}>{title}</h3>
+      <p style={{ fontFamily: PC.sans, fontSize: 14, lineHeight: 1.55, color: PC.inkSoft, margin: 0 }}>{body}</p>
+      <div style={{ marginTop: 'auto', paddingTop: 16 }}>{children}</div>
+    </div>
+  );
+}
+
+function PCFeatures({ accent = PC.accent }) {
+  return (
+    <section id="features" style={{ padding: '96px 56px', background: PC.bg }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 48, gap: 48 }}>
+          <h2 style={{ fontFamily: PC.serif, fontSize: 56, lineHeight: 1, letterSpacing: -1.2, color: PC.ink, margin: 0, fontWeight: 400, maxWidth: 640 }}>
+            Small things that make it<br /><span style={{ fontStyle: 'italic', color: accent }}>feel right.</span>
+          </h2>
+          <p style={{ fontFamily: PC.serif, fontSize: 17, lineHeight: 1.5, color: PC.inkSoft, margin: 0, maxWidth: 360 }}>
+            A messaging app should feel like a messaging app — not a vocabulary deck pretending.
+          </p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 20 }}>
+          <PCFeatureCard kicker="Dica" title="Corrections, gently" body="When you slip, a small note appears beneath your message. Wrong → right, with a one-line reason. Tap to dismiss." accent={accent}>
+            <div style={{ background: PC.bg, padding: 12, borderRadius: 10 }}>
+              <ChatBubble from="me" text="Vou a la museo del Prado" dica={{ wrong: 'a la museo', right: 'al museo', note: '"Museo" is masculine.' }} accent={accent} muted="#ebe8e2" mutedText="#1f1a14" size="sm" />
+            </div>
+          </PCFeatureCard>
+          <PCFeatureCard kicker="Personas" title="Each contact has a soul" body="Name, emoji, backstory, tone, interests. Generated once, then they stay in character — forever." accent={accent}>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              {PERSONAS.map(p => (
+                <div key={p.name} style={{ background: '#fff', border: `1px solid ${PC.line}`, borderRadius: 999, padding: '6px 10px 6px 6px', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <span style={{ width: 26, height: 26, borderRadius: '50%', background: PC.bgAlt, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14 }}>{p.emoji}</span>
+                  <span style={{ fontFamily: PC.sans, fontSize: 12.5, color: PC.ink, fontWeight: 500 }}>{p.name}</span>
+                  <span style={{ fontFamily: PC.mono, fontSize: 10, color: PC.inkMuted }}>{p.lang}</span>
+                </div>
+              ))}
+            </div>
+          </PCFeatureCard>
+          <PCFeatureCard kicker="Tap-to-translate" title="Read in your language" body="Tap any AI message to see a translation." accent={accent}>
+            <div style={{ background: PC.bg, padding: 12, borderRadius: 10 }}>
+              <ChatBubble from="ai" text="Que querida! Temos uns lenços de seda lindíssimos." accent={accent} muted="#2c2c2e" mutedText="#fff" size="sm" />
+            </div>
+          </PCFeatureCard>
+          <PCFeatureCard kicker="Levels" title="A1 to C1, mid-thread" body="Switch CEFR level any time. The contact's vocabulary, grammar, and patience adjust. The conversation doesn't reset." accent={accent}>
+            <div style={{ display: 'flex', gap: 4 }}>
+              {['A1', 'A2', 'B1', 'B2', 'C1'].map((lvl, i) => (
+                <div key={lvl} style={{ flex: 1, padding: '10px 6px', textAlign: 'center', borderRadius: 8, background: i === 2 ? accent : PC.bg, color: i === 2 ? '#fff' : PC.inkSoft, fontFamily: PC.mono, fontSize: 12, fontWeight: 600, border: `1px solid ${i === 2 ? accent : PC.line}` }}>{lvl}</div>
+              ))}
+            </div>
+          </PCFeatureCard>
+          <PCFeatureCard kicker="Streak" title="Daily goals, no nags" body="Track consecutive days. Hit your message count. Local notifications, not push spam." accent={accent}>
+            <div style={{ display: 'flex', alignItems: 'flex-end', gap: 4, height: 56 }}>
+              {[22, 38, 30, 52, 44, 60, 48].map((h, i) => (
+                <div key={i} style={{ flex: 1, height: `${h}px`, background: i === 6 ? accent : `${accent}55`, borderRadius: 4 }} />
+              ))}
+            </div>
+            <div style={{ marginTop: 10, display: 'flex', justifyContent: 'space-between', fontFamily: PC.mono, fontSize: 10, color: PC.inkMuted }}>
+              <span>M T W T F S S</span>
+              <span style={{ color: accent, fontWeight: 600 }}>14 day streak</span>
+            </div>
+          </PCFeatureCard>
+          <PCFeatureCard kicker="Serverless" title="Your data, your phone" body="No account. No backend. Conversations live on your device. AI calls go directly from your phone to your provider, with your key." accent={accent}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+              {['iPhone', 'Your API key', 'LLM provider'].map((label, i, arr) => (
+                <React.Fragment key={label}>
+                  <div style={{ fontFamily: PC.mono, fontSize: 11, color: PC.inkSoft, padding: '6px 10px', background: PC.bg, borderRadius: 8 }}>{label}</div>
+                  {i < arr.length - 1 && <span style={{ color: PC.inkMuted }}>→</span>}
+                </React.Fragment>
+              ))}
+            </div>
+          </PCFeatureCard>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PCLanguages({ accent = PC.accent }) {
+  return (
+    <section id="languages" style={{ padding: '96px 56px', background: PC.bgAlt }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+        <PCBadge color={PC.ocean}>Eleven languages</PCBadge>
+        <h2 style={{ fontFamily: PC.serif, fontSize: 56, lineHeight: 1, letterSpacing: -1.2, color: PC.ink, margin: '20px 0 16px', fontWeight: 400, maxWidth: 760 }}>
+          With <span style={{ fontStyle: 'italic', color: accent }}>dialect precision.</span>
+        </h2>
+        <p style={{ fontFamily: PC.serif, fontSize: 18, color: PC.inkSoft, maxWidth: 600, margin: '0 0 48px' }}>
+          Castilian and Latin American Spanish aren't the same language. We treat them like they aren't.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 16 }}>
+          {LANGUAGES.map((l) => (
+            <div key={l.name} style={{ background: PC.bg, border: `1px solid ${PC.line}`, borderRadius: 14, padding: 20, display: 'flex', flexDirection: 'column', gap: 10, minHeight: 150 }}>
+              <div style={{ fontSize: 26 }}>{l.flag}</div>
+              <div style={{ fontFamily: PC.serif, fontSize: 19, color: PC.ink, fontWeight: 500 }}>{l.name}</div>
+              {l.dialects.length > 0 && (
+                <div style={{ display: 'flex', gap: 4, flexWrap: 'wrap' }}>
+                  {l.dialects.map(d => (
+                    <span key={d} style={{ fontFamily: PC.mono, fontSize: 9.5, color: accent, padding: '2px 7px', borderRadius: 999, background: `${accent}15` }}>{d}</span>
+                  ))}
+                </div>
+              )}
+              <div style={{ marginTop: 'auto', fontFamily: PC.serif, fontStyle: 'italic', fontSize: 14, color: PC.inkMuted }}>"{l.sample}"</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PCPrivacySection({ accent = PC.accent }) {
+  return (
+    <section style={{ padding: '120px 56px', background: PC.ink, color: '#f5f0e8' }}>
+      <div style={{ maxWidth: 1080, margin: '0 auto' }}>
+        <div style={{ fontFamily: PC.mono, fontSize: 12, letterSpacing: 1.4, color: PC.sun, textTransform: 'uppercase', marginBottom: 32 }}>Privacy by architecture</div>
+        <h2 style={{ fontFamily: PC.serif, fontSize: 64, lineHeight: 1.05, letterSpacing: -1.4, fontWeight: 400, margin: '0 0 40px' }}>
+          We don't have a server.<br /><span style={{ fontStyle: 'italic', color: PC.sun }}>So we can't lose your data.</span>
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, marginTop: 48 }}>
+          <p style={{ fontFamily: PC.serif, fontSize: 19, lineHeight: 1.55, color: '#d8cfc0', margin: 0 }}>
+            Patter is BYOK — bring your own key. You sign up with Google AI Studio, OpenAI, Anthropic, or any OpenAI-compatible provider,
+            paste your API key, and we store it in the iOS Keychain on your phone. Every message goes
+            from your iPhone straight to the provider.
+          </p>
+          <p style={{ fontFamily: PC.serif, fontSize: 19, lineHeight: 1.55, color: '#d8cfc0', margin: 0 }}>
+            No account. No subscription. No analytics. No telemetry. Your conversations stay on your device.
+          </p>
+        </div>
+        <div style={{ marginTop: 64, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          {['No backend', 'No account', 'No subscriptions', 'No analytics', 'iCloud sync (coming soon)'].map(t => (
+            <span key={t} style={{ fontFamily: PC.mono, fontSize: 12, color: '#f5f0e8', padding: '8px 14px', borderRadius: 999, border: '1px solid rgba(245,240,232,0.25)' }}>· {t}</span>
+          ))}
+        </div>
+        <div style={{ marginTop: 40 }}>
+          <a href="/patter/PRIVACY.html" style={{ fontFamily: PC.sans, fontSize: 14, fontWeight: 500, color: '#f5f0e8', padding: '12px 20px', borderRadius: 999, border: '1px solid rgba(245,240,232,0.4)', textDecoration: 'none', display: 'inline-block' }}>
+            Read the full privacy policy →
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PCFooter({ accent = PC.accent }) {
+  return (
+    <footer style={{ padding: '96px 56px 48px', background: PC.bg }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 64, alignItems: 'flex-end', paddingBottom: 56, borderBottom: `1px solid ${PC.line}` }}>
+          <div>
+            <h2 style={{ fontFamily: PC.serif, fontSize: 72, lineHeight: 0.98, letterSpacing: -1.8, color: PC.ink, margin: 0, fontWeight: 400 }}>
+              Start a<br /><span style={{ fontStyle: 'italic', color: accent }}>conversation.</span>
+            </h2>
+          </div>
+          <div>
+            <p style={{ fontFamily: PC.serif, fontSize: 18, color: PC.inkSoft, lineHeight: 1.5, marginTop: 0 }}>
+              One-time purchase. No subscription. You only pay your AI provider, by the message. Fractions of a cent.
+            </p>
+            <a href="https://apps.apple.com/us/app/patter-language-learning/id6762643113" style={{ fontFamily: PC.sans, fontSize: 15, fontWeight: 600, color: '#fff', background: PC.ink, padding: '14px 28px', borderRadius: 999, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 10, marginTop: 8, whiteSpace: 'nowrap' }}>
+              <span style={{ fontSize: 18 }}>↓</span> Download for iPhone
+            </a>
+          </div>
+        </div>
+        <div style={{ marginTop: 32, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: PC.sans, fontSize: 12.5, color: PC.inkMuted }}>
+          <span>© 2026 vilaverdeapps — independent software from somewhere quiet.</span>
+          <div style={{ display: 'flex', gap: 24 }}>
+            <a href="/patter/PRIVACY.html" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy</a>
+            <a href="/patter/SUPPORT.html" style={{ color: 'inherit', textDecoration: 'none' }}>Support</a>
+            <a href="https://github.com/vilaverdeapps/patter" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>GitHub</a>
+          </div>
+        </div>
+        <div style={{ marginTop: 20, fontFamily: PC.sans, fontSize: 11, color: PC.inkMuted, lineHeight: 1.7 }}>
+          <p style={{ margin: '0 0 4px' }}>Patter is developed by vilaverdeapps and is not affiliated with, endorsed by, or sponsored by any third-party service referenced on this page.</p>
+          <p style={{ margin: 0 }}>Google and Gemini are trademarks of Google LLC. OpenAI is a trademark of OpenAI, L.L.C. Anthropic and Claude are trademarks of Anthropic, PBC. Apple, App Store, iPhone, and iOS are trademarks of Apple Inc., registered in the U.S. and other countries. Use of these names is solely to identify compatible services.</p>
+        </div>
+      </div>
     </footer>
-  </body>
+  );
+}
+
+function Postcards() {
+  return (
+    <div style={{ background: PC.bg, color: PC.ink, width: '100%' }}>
+      <PCNav />
+      <PCHero />
+      <PCHowItWorks />
+      <PCFeatures />
+      <PCLanguages />
+      <PCPrivacySection />
+      <PCFooter />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<Postcards />);
+</script>
+</body>
 </html>
