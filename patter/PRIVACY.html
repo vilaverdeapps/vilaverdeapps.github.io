@@ -100,7 +100,7 @@
       <a class="pc-back" href="/patter/MARKETING.html">← Back to home</a>
       <article>
         <h1>Privacy Policy</h1>
-        <p class="meta"><strong>Last updated:</strong> 3 May 2026</p>
+        <p class="meta"><strong>Last updated:</strong> 12 May 2026</p>
 
         <p>
           This policy describes how <strong>Patter</strong> ("the app") handles information when you use it on
@@ -149,6 +149,10 @@
           <li>
             The app uses <strong>local notifications</strong> (proactive pings) to remind you to practice. These are
             scheduled entirely on your device and do not transmit any personal information.
+          </li>
+          <li>
+            The app uses Sentry for anonymous crash reporting to improve stability. No conversation content is shared. You can opt
+            out in Settings.
           </li>
         </ul>
 
@@ -348,16 +352,29 @@
         <h3>No logging of sensitive data</h3>
         <p>
           OAuth tokens and your email address are never written to log files, console output, crash reports,
-          SwiftData, or UserDefaults. The app contains no analytics or crash-reporting SDK that could
-          inadvertently capture this data.
+          SwiftData, or UserDefaults. The crash-reporting SDK (Sentry) is configured to exclude tokens, email addresses, 
+          and conversation content from all error reports.
         </p>
 
-        <h2>No advertising or analytics SDKs</h2>
+        <h2>Crash reporting (Sentry)</h2>
         <p>
-          Patter does not integrate any third-party advertising, analytics, or crash-reporting SDKs. No tracking
-          identifiers, coarse location data, or usage diagnostics are collected by the app itself. Any data
-          processing related to advertising or analytics is governed solely by your LLM provider's own services
-          (if applicable to your account with them).
+          Patter uses Sentry (sentry.io) to collect anonymous crash reports and error logs. This helps identify and fix bugs faster.
+          <ul>
+            <li>
+              <strong>What is collected:</strong> Error types, stack traces, app version, device model, and OS version. No conversation content, messages, API keys, or
+              personal identifiers are ever included.
+            </li>
+            <li>
+              <strong>IP addresses:</strong> Sentry is configured with sendDefaultPii = false — your IP address is not transmitted.
+            </li>
+            <li>
+              <strong>Your control:</strong> You can disable crash reporting at any time in <strong>Settings → Privacy → Share</strong> crash reports. EU/UK users are asked for
+              consent on first launch.
+            </li>
+            <li>
+              <strong>Sentry's policy:</strong> sentry.io/privacy (https://sentry.io/privacy/)
+            </li>
+          </ul>
         </p>
 
         <h2>Data retention</h2>
