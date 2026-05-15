@@ -42,10 +42,11 @@
     .pc-nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
     .pc-nav-logo img { width: 32px; height: 32px; border-radius: 8px; display: block; }
     .pc-nav-logo-name { font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: -0.3px; }
+    .pc-nav-right { display: flex; align-items: center; gap: 12px; }
     .pc-nav-links { display: flex; align-items: center; gap: 32px; font-family: var(--sans); font-size: 13.5px; color: var(--ink-soft); }
     .pc-nav-links a { text-decoration: none; color: inherit; }
     .pc-nav-links a:hover { color: var(--ink); }
-    .pc-nav-cta { font-family: var(--sans); font-size: 13px; font-weight: 600; color: #fff !important; background: var(--ink); padding: 9px 16px; border-radius: 999px; white-space: nowrap; }
+    .pc-nav-cta { font-family: var(--sans); font-size: 13px; font-weight: 600; color: #fff !important; background: var(--ink); padding: 9px 16px; border-radius: 999px; white-space: nowrap; text-decoration: none; }
 
     /* Prose */
     .pc-prose-wrap { max-width: 800px; margin: 0 auto; padding: 64px 56px 96px; }
@@ -67,6 +68,7 @@
     .pc-prose-wrap th { text-align: left; font-weight: 600; color: var(--ink); padding: 10px 14px; border-bottom: 2px solid var(--line); }
     .pc-prose-wrap td { padding: 10px 14px; border-bottom: 1px solid var(--line); color: var(--ink-soft); vertical-align: top; }
     .pc-prose-wrap tr:last-child td { border-bottom: none; }
+    .pc-prose-wrap table { overflow-x: auto; display: block; }
 
     /* Footer */
     .pc-footer { padding: 48px 56px; background: var(--bg); border-top: 1px solid var(--line); }
@@ -76,6 +78,20 @@
     .pc-footer-links a:hover { color: var(--ink); }
     .pc-footer-copy { font-family: var(--sans); font-size: 12.5px; color: var(--ink-muted); margin: 0 0 8px; }
     .pc-footer-legal { font-family: var(--sans); font-size: 11px; color: var(--ink-muted); line-height: 1.7; margin: 0; }
+
+    @media (max-width: 900px) {
+      .pc-nav { padding: 18px 32px; }
+      .pc-prose-wrap { padding: 48px 32px 72px; }
+      .pc-footer { padding: 32px 32px; }
+    }
+
+    @media (max-width: 600px) {
+      .pc-nav { padding: 14px 20px; }
+      .pc-nav-links { display: none; }
+      .pc-prose-wrap { padding: 32px 20px 56px; }
+      .pc-prose-wrap h1 { font-size: clamp(32px, 9vw, 44px); }
+      .pc-footer { padding: 24px 20px; }
+    }
   </style>
 </head>
 <body>
@@ -86,11 +102,13 @@
       <img src="/assets/patter-icon.png" alt="" />
       <span class="pc-nav-logo-name">Patter</span>
     </a>
-    <div class="pc-nav-links">
-      <a href="/patter/MARKETING.html#features">Features</a>
-      <a href="/patter/MARKETING.html#languages">Languages</a>
-      <a href="/patter/PRIVACY.html">Privacy</a>
-      <a href="/patter/SUPPORT.html">Support</a>
+    <div class="pc-nav-right">
+      <div class="pc-nav-links">
+        <a href="/patter/MARKETING.html#features">Features</a>
+        <a href="/patter/MARKETING.html#languages">Languages</a>
+        <a href="/patter/PRIVACY.html">Privacy</a>
+        <a href="/patter/SUPPORT.html">Support</a>
+      </div>
       <a class="pc-nav-cta" href="https://apps.apple.com/us/app/patter-language-learning/id6762643113">Get the app</a>
     </div>
   </nav>

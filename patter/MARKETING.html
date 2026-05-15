@@ -42,6 +42,86 @@
     * { box-sizing: border-box; }
     body { overflow-x: hidden; }
     a { color: inherit; }
+
+    /* Nav */
+    .pc-nav { display: flex; align-items: center; justify-content: space-between; padding: 24px 56px; }
+    .pc-nav-links { display: flex; align-items: center; gap: 32px; }
+
+    /* Hero */
+    .pc-hero { padding: 64px 56px 80px; position: relative; overflow: hidden; }
+    .pc-hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; max-width: 1280px; }
+    .pc-hero-phone { display: flex; justify-content: center; align-items: center; position: relative; }
+    .pc-hero-h1 { font-size: 86px; line-height: 0.98; letter-spacing: -2.2px; margin: 28px 0 24px; font-weight: 400; }
+
+    /* How it works */
+    .pc-hiw { padding: 96px 56px; }
+    .pc-hiw-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
+    .pc-hiw-h2 { font-size: 56px; line-height: 1; letter-spacing: -1.2px; margin: 20px 0 56px; font-weight: 400; max-width: 720px; }
+
+    /* Features */
+    .pc-features { padding: 96px 56px; }
+    .pc-features-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 48px; gap: 48px; }
+    .pc-features-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+    .pc-features-h2 { font-size: 56px; line-height: 1; letter-spacing: -1.2px; margin: 0; font-weight: 400; max-width: 640px; }
+
+    /* Languages */
+    .pc-lang { padding: 96px 56px; }
+    .pc-lang-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    .pc-lang-h2 { font-size: 56px; line-height: 1; letter-spacing: -1.2px; margin: 20px 0 16px; font-weight: 400; max-width: 760px; }
+
+    /* Privacy */
+    .pc-privacy { padding: 120px 56px; }
+    .pc-privacy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 48px; }
+    .pc-privacy-h2 { font-size: 64px; line-height: 1.05; letter-spacing: -1.4px; font-weight: 400; margin: 0 0 40px; }
+    .pc-privacy-badges { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 64px; }
+
+    /* Footer */
+    .pc-footer { padding: 96px 56px 48px; }
+    .pc-footer-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: flex-end; padding-bottom: 56px; }
+    .pc-footer-h2 { font-size: 72px; line-height: 0.98; letter-spacing: -1.8px; margin: 0; font-weight: 400; }
+    .pc-footer-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 32px; }
+
+    /* Tablet — 900px */
+    @media (max-width: 900px) {
+      .pc-nav { padding: 18px 32px; }
+      .pc-hero { padding: 48px 32px 64px; }
+      .pc-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .pc-hero-h1 { font-size: clamp(48px, 8vw, 72px); }
+      .pc-hiw { padding: 64px 32px; }
+      .pc-hiw-grid { grid-template-columns: 1fr; gap: 32px; }
+      .pc-hiw-h2 { font-size: clamp(36px, 6vw, 48px); margin-bottom: 40px; }
+      .pc-features { padding: 64px 32px; }
+      .pc-features-header { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 32px; }
+      .pc-features-grid { grid-template-columns: 1fr 1fr; }
+      .pc-features-h2 { font-size: clamp(36px, 6vw, 48px); }
+      .pc-lang { padding: 64px 32px; }
+      .pc-lang-grid { grid-template-columns: repeat(3, 1fr); }
+      .pc-lang-h2 { font-size: clamp(36px, 6vw, 48px); }
+      .pc-privacy { padding: 80px 32px; }
+      .pc-privacy-grid { grid-template-columns: 1fr; gap: 24px; }
+      .pc-privacy-h2 { font-size: clamp(36px, 7vw, 52px); }
+      .pc-privacy-badges { margin-top: 40px; }
+      .pc-footer { padding: 64px 32px 40px; }
+      .pc-footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .pc-footer-h2 { font-size: clamp(42px, 8vw, 60px); }
+      .pc-footer-bottom { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+
+    /* Mobile — 600px */
+    @media (max-width: 600px) {
+      .pc-nav { padding: 14px 20px; }
+      .pc-nav-links { display: none; }
+      .pc-hero { padding: 32px 20px 48px; }
+      .pc-hero-h1 { font-size: clamp(36px, 10vw, 52px); }
+      .pc-hero-phone { display: none; }
+      .pc-hiw { padding: 48px 20px; }
+      .pc-features { padding: 48px 20px; }
+      .pc-features-grid { grid-template-columns: 1fr; }
+      .pc-lang { padding: 48px 20px; }
+      .pc-lang-grid { grid-template-columns: repeat(2, 1fr); }
+      .pc-privacy { padding: 56px 20px; }
+      .pc-footer { padding: 48px 20px 32px; }
+    }
   </style>
 </head>
 <body>
@@ -204,16 +284,18 @@ function PCBadge({ children, color = PC.accent }) {
 
 function PCNav({ accent = PC.accent }) {
   return (
-    <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '24px 56px', borderBottom: `1px solid ${PC.line}` }}>
+    <nav className="pc-nav" style={{ borderBottom: `1px solid ${PC.line}` }}>
       <a href="/patter/MARKETING.html" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
         <img src="/assets/patter-icon.png" alt="" style={{ width: 32, height: 32, borderRadius: 8, display: 'block' }} />
         <span style={{ fontFamily: PC.serif, fontSize: 21, fontWeight: 500, color: PC.ink, letterSpacing: -0.3 }}>Patter</span>
       </a>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 32, fontFamily: PC.sans, fontSize: 13.5, color: PC.inkSoft }}>
-        <a href="#features" style={{ color: 'inherit', textDecoration: 'none' }}>Features</a>
-        <a href="#languages" style={{ color: 'inherit', textDecoration: 'none' }}>Languages</a>
-        <a href="/patter/PRIVACY.html" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy</a>
-        <a href="/patter/SUPPORT.html" style={{ color: 'inherit', textDecoration: 'none' }}>Support</a>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <div className="pc-nav-links" style={{ fontFamily: PC.sans, fontSize: 13.5, color: PC.inkSoft }}>
+          <a href="#features" style={{ color: 'inherit', textDecoration: 'none' }}>Features</a>
+          <a href="#languages" style={{ color: 'inherit', textDecoration: 'none' }}>Languages</a>
+          <a href="/patter/PRIVACY.html" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy</a>
+          <a href="/patter/SUPPORT.html" style={{ color: 'inherit', textDecoration: 'none' }}>Support</a>
+        </div>
         <a href="https://apps.apple.com/us/app/patter-language-learning/id6762643113" style={{ fontFamily: PC.sans, fontSize: 13, fontWeight: 600, color: '#fff', background: PC.ink, padding: '9px 16px', borderRadius: 999, textDecoration: 'none', whiteSpace: 'nowrap' }}>Get the app</a>
       </div>
     </nav>
@@ -222,12 +304,12 @@ function PCNav({ accent = PC.accent }) {
 
 function PCHero({ accent = PC.accent, convo = 'pt_pt' }) {
   return (
-    <section style={{ padding: '64px 56px 80px', position: 'relative', overflow: 'hidden' }}>
+    <section className="pc-hero">
       <div style={{ position: 'absolute', top: 80, right: 80, width: 120, height: 140, background: `repeating-linear-gradient(45deg, ${accent}18, ${accent}18 6px, transparent 6px, transparent 12px)`, borderRadius: 6, transform: 'rotate(8deg)', opacity: 0.6 }} />
-      <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: 64, alignItems: 'center', maxWidth: 1280 }}>
+      <div className="pc-hero-grid">
         <div>
           <PCBadge>Now on the App Store · iOS 18.6+</PCBadge>
-          <h1 style={{ fontFamily: PC.serif, fontSize: 86, lineHeight: 0.98, letterSpacing: -2.2, color: PC.ink, margin: '28px 0 24px', fontWeight: 400 }}>
+          <h1 className="pc-hero-h1" style={{ fontFamily: PC.serif, color: PC.ink }}>
             Like texting<br />
             <span style={{ fontStyle: 'italic', color: accent }}>a friend</span> who<br />
             speaks the language<br />
@@ -238,7 +320,7 @@ function PCHero({ accent = PC.accent, convo = 'pt_pt' }) {
             a friend in Tokyo — who stay in character and reply only in your target language.
             Corrections appear as you go.
           </p>
-          <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
             <a href="https://apps.apple.com/us/app/patter-language-learning/id6762643113" style={{ fontFamily: PC.sans, fontSize: 15, fontWeight: 600, color: '#fff', background: PC.ink, padding: '14px 24px', borderRadius: 999, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 10, whiteSpace: 'nowrap' }}>
               <span style={{ fontSize: 18 }}>↓</span> Download for iPhone
             </a>
@@ -250,7 +332,7 @@ function PCHero({ accent = PC.accent, convo = 'pt_pt' }) {
             <span style={{ whiteSpace: 'nowrap' }}>· Bring your own API key</span>
           </div>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+        <div className="pc-hero-phone">
           <div style={{ position: 'absolute', width: 380, height: 520, background: PC.bgAlt, borderRadius: 18, transform: 'rotate(-4deg)', boxShadow: '0 20px 60px rgba(0,0,0,0.08)', border: `1px solid ${PC.line}` }} />
           <PhoneFrame width={320} height={620}>
             <ChatThread convo={convo} accent={accent} mutedBubble="#2c2c2e" showDica={true} />
@@ -268,13 +350,13 @@ function PCHowItWorks({ accent = PC.accent }) {
     { n: '03', title: 'Text them', body: "They reply only in the language you're learning. When you slip, a quiet correction appears below your message. No drills. No tests." },
   ];
   return (
-    <section id="how-it-works" style={{ padding: '96px 56px', background: PC.bgAlt, borderTop: `1px solid ${PC.line}`, borderBottom: `1px solid ${PC.line}` }}>
+    <section id="how-it-works" className="pc-hiw" style={{ background: PC.bgAlt, borderTop: `1px solid ${PC.line}`, borderBottom: `1px solid ${PC.line}` }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <PCBadge color={PC.forest}>How it works</PCBadge>
-        <h2 style={{ fontFamily: PC.serif, fontSize: 56, lineHeight: 1, letterSpacing: -1.2, color: PC.ink, margin: '20px 0 56px', fontWeight: 400, maxWidth: 720 }}>
+        <h2 className="pc-hiw-h2" style={{ fontFamily: PC.serif, color: PC.ink }}>
           Three steps. <span style={{ fontStyle: 'italic', color: PC.inkSoft }}>Then it's just texting.</span>
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 48 }}>
+        <div className="pc-hiw-grid">
           {steps.map((s) => (
             <div key={s.n}>
               <div style={{ fontFamily: PC.mono, fontSize: 13, color: accent, letterSpacing: 1, marginBottom: 16 }}>{s.n}</div>
@@ -302,17 +384,17 @@ function PCFeatureCard({ kicker, title, body, accent, children }) {
 
 function PCFeatures({ accent = PC.accent }) {
   return (
-    <section id="features" style={{ padding: '96px 56px', background: PC.bg }}>
+    <section id="features" className="pc-features" style={{ background: PC.bg }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 48, gap: 48 }}>
-          <h2 style={{ fontFamily: PC.serif, fontSize: 56, lineHeight: 1, letterSpacing: -1.2, color: PC.ink, margin: 0, fontWeight: 400, maxWidth: 640 }}>
+        <div className="pc-features-header">
+          <h2 className="pc-features-h2" style={{ fontFamily: PC.serif, color: PC.ink }}>
             Small things that make it<br /><span style={{ fontStyle: 'italic', color: accent }}>feel right.</span>
           </h2>
           <p style={{ fontFamily: PC.serif, fontSize: 17, lineHeight: 1.5, color: PC.inkSoft, margin: 0, maxWidth: 360 }}>
             A messaging app should feel like a messaging app — not a vocabulary deck pretending.
           </p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 20 }}>
+        <div className="pc-features-grid">
           <PCFeatureCard kicker="Dica" title="Corrections, gently" body="When you slip, a small note appears beneath your message. Wrong → right, with a one-line reason. Tap to dismiss." accent={accent}>
             <div style={{ background: PC.bg, padding: 12, borderRadius: 10 }}>
               <ChatBubble from="me" text="Vou a la museo del Prado" dica={{ wrong: 'a la museo', right: 'al museo', note: '"Museo" is masculine.' }} accent={accent} muted="#ebe8e2" mutedText="#1f1a14" size="sm" />
@@ -370,16 +452,16 @@ function PCFeatures({ accent = PC.accent }) {
 
 function PCLanguages({ accent = PC.accent }) {
   return (
-    <section id="languages" style={{ padding: '96px 56px', background: PC.bgAlt }}>
+    <section id="languages" className="pc-lang" style={{ background: PC.bgAlt }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <PCBadge color={PC.ocean}>Eleven languages</PCBadge>
-        <h2 style={{ fontFamily: PC.serif, fontSize: 56, lineHeight: 1, letterSpacing: -1.2, color: PC.ink, margin: '20px 0 16px', fontWeight: 400, maxWidth: 760 }}>
+        <h2 className="pc-lang-h2" style={{ fontFamily: PC.serif, color: PC.ink }}>
           With <span style={{ fontStyle: 'italic', color: accent }}>dialect precision.</span>
         </h2>
         <p style={{ fontFamily: PC.serif, fontSize: 18, color: PC.inkSoft, maxWidth: 600, margin: '0 0 48px' }}>
           Castilian and Latin American Spanish aren't the same language. We treat them like they aren't.
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 16 }}>
+        <div className="pc-lang-grid">
           {LANGUAGES.map((l) => (
             <div key={l.name} style={{ background: PC.bg, border: `1px solid ${PC.line}`, borderRadius: 14, padding: 20, display: 'flex', flexDirection: 'column', gap: 10, minHeight: 150 }}>
               <div style={{ fontSize: 26 }}>{l.flag}</div>
@@ -402,13 +484,13 @@ function PCLanguages({ accent = PC.accent }) {
 
 function PCPrivacySection({ accent = PC.accent }) {
   return (
-    <section style={{ padding: '120px 56px', background: PC.ink, color: '#f5f0e8' }}>
+    <section className="pc-privacy" style={{ background: PC.ink, color: '#f5f0e8' }}>
       <div style={{ maxWidth: 1080, margin: '0 auto' }}>
         <div style={{ fontFamily: PC.mono, fontSize: 12, letterSpacing: 1.4, color: PC.sun, textTransform: 'uppercase', marginBottom: 32 }}>Privacy by architecture</div>
-        <h2 style={{ fontFamily: PC.serif, fontSize: 64, lineHeight: 1.05, letterSpacing: -1.4, fontWeight: 400, margin: '0 0 40px' }}>
+        <h2 className="pc-privacy-h2" style={{ fontFamily: PC.serif }}>
           We don't have a server.<br /><span style={{ fontStyle: 'italic', color: PC.sun }}>So we can't lose your data.</span>
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 56, marginTop: 48 }}>
+        <div className="pc-privacy-grid">
           <p style={{ fontFamily: PC.serif, fontSize: 19, lineHeight: 1.55, color: '#d8cfc0', margin: 0 }}>
             Patter is BYOK — bring your own key. You sign up with Google AI Studio, OpenAI, Anthropic, or any OpenAI-compatible provider,
             paste your API key, and we store it in the iOS Keychain on your phone. Every message goes
@@ -418,7 +500,7 @@ function PCPrivacySection({ accent = PC.accent }) {
             No account. No subscription. No analytics. No telemetry. Your conversations stay on your device.
           </p>
         </div>
-        <div style={{ marginTop: 64, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+        <div className="pc-privacy-badges">
           {['No backend', 'No account', 'No subscriptions', 'No analytics', 'iCloud sync (coming soon)'].map(t => (
             <span key={t} style={{ fontFamily: PC.mono, fontSize: 12, color: '#f5f0e8', padding: '8px 14px', borderRadius: 999, border: '1px solid rgba(245,240,232,0.25)' }}>· {t}</span>
           ))}
@@ -435,11 +517,11 @@ function PCPrivacySection({ accent = PC.accent }) {
 
 function PCFooter({ accent = PC.accent }) {
   return (
-    <footer style={{ padding: '96px 56px 48px', background: PC.bg }}>
+    <footer className="pc-footer" style={{ background: PC.bg }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 64, alignItems: 'flex-end', paddingBottom: 56, borderBottom: `1px solid ${PC.line}` }}>
+        <div className="pc-footer-grid" style={{ borderBottom: `1px solid ${PC.line}` }}>
           <div>
-            <h2 style={{ fontFamily: PC.serif, fontSize: 72, lineHeight: 0.98, letterSpacing: -1.8, color: PC.ink, margin: 0, fontWeight: 400 }}>
+            <h2 className="pc-footer-h2" style={{ fontFamily: PC.serif, color: PC.ink }}>
               Start a<br /><span style={{ fontStyle: 'italic', color: accent }}>conversation.</span>
             </h2>
           </div>
@@ -452,7 +534,7 @@ function PCFooter({ accent = PC.accent }) {
             </a>
           </div>
         </div>
-        <div style={{ marginTop: 32, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: PC.sans, fontSize: 12.5, color: PC.inkMuted }}>
+        <div className="pc-footer-bottom" style={{ fontFamily: PC.sans, fontSize: 12.5, color: PC.inkMuted }}>
           <span>© 2026 vilaverdeapps — independent software from somewhere quiet.</span>
           <div style={{ display: 'flex', gap: 24 }}>
             <a href="/patter/PRIVACY.html" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy</a>
