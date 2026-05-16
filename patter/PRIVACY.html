@@ -119,7 +119,7 @@
       <a class="pc-back" href="/patter/MARKETING.html">← Back to home</a>
       <article>
         <h1>Privacy Policy</h1>
-        <p class="meta"><strong>Last updated:</strong> 12 May 2026</p>
+        <p class="meta"><strong>Last updated:</strong> 16 May 2026</p>
 
         <p>
           This policy describes how <strong>Patter</strong> ("the app") handles information when you use it on
@@ -170,8 +170,7 @@
             scheduled entirely on your device and do not transmit any personal information.
           </li>
           <li>
-            The app uses Sentry for anonymous crash reporting to improve stability. No conversation content is shared. You can opt
-            out in Settings.
+            The app uses Sentry for anonymous diagnostics — crash reports, performance metrics, and aggregated usage events (e.g. "a message was sent", "onboarding was completed"). No conversation content, message text, API keys, or personal identifiers are collected. Aggregated counts and provider type (e.g. "OpenRouter") may be recorded. You can opt out in Settings → Privacy.
           </li>
         </ul>
 
@@ -375,19 +374,18 @@
           and conversation content from all error reports.
         </p>
 
-        <h2>Crash reporting (Sentry)</h2>
+        <h2>Anonymous diagnostics (Sentry)</h2>
         <p>
-          Patter uses Sentry (sentry.io) to collect anonymous crash reports and error logs. This helps identify and fix bugs faster.
+          Patter uses Sentry (sentry.io) to collect anonymous diagnostics. This helps identify bugs and improve performance.
           <ul>
             <li>
-              <strong>What is collected:</strong> Error types, stack traces, app version, device model, and OS version. No conversation content, messages, API keys, or
-              personal identifiers are ever included.
+              <strong>What is collected:</strong> Crash reports, stack traces, performance spans (e.g. AI reply latency), and aggregated usage events (e.g. "a message was sent", "onboarding completed"). Also: app version, device model, and OS version. No conversation content, message text, API keys, or personal identifiers are ever included. Aggregated counts and provider type (e.g. "OpenRouter") may be recorded.
             </li>
             <li>
               <strong>IP addresses:</strong> Sentry is configured with sendDefaultPii = false — your IP address is not transmitted.
             </li>
             <li>
-              <strong>Your control:</strong> You can disable crash reporting at any time in <strong>Settings → Privacy → Share</strong> crash reports. EU/UK users are asked for
+              <strong>Your control:</strong> You can disable diagnostics at any time in <strong>Settings → Privacy → Share anonymous diagnostics</strong>. EU/UK users are asked for
               consent on first launch.
             </li>
             <li>
