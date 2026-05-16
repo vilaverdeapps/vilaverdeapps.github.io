@@ -131,17 +131,17 @@
         <!-- ─── GETTING STARTED ─── -->
         <h2>Getting started</h2>
 
-        <h3>What is Patter?</h3>
+        <h3 id="what-is-patter">What is Patter?</h3>
         <p>
           Patter is a serverless iOS language-learning app. You create AI contacts — each with a name, backstory, and personality — and text them. They reply only in the language you're learning. When you make a grammar mistake, a quiet correction appears below your message. No drills, no vocabulary decks, no account required.
         </p>
 
-        <h3>What does BYOK mean?</h3>
+        <h3 id="what-is-byok">What does BYOK mean?</h3>
         <p>
           BYOK stands for <strong>Bring Your Own Key</strong>. Patter has no backend server — instead, you sign up directly with an AI provider (Google AI Studio, OpenAI, Anthropic, or OpenRouter), get an API key, and paste it into the app. Messages go from your iPhone straight to the provider. The developer never sees your conversations or your key.
         </p>
 
-        <h3>Which AI provider should I start with?</h3>
+        <h3 id="choose-ai-provider">Which AI provider should I start with?</h3>
         <p>
           <strong>Google AI Studio</strong> is the easiest starting point — it has a generous free tier and requires no billing information to begin. If you run into rate limits (common with heavy use), OpenRouter with a small credit top-up gives you access to many models from one account. <a href="#free-options">See all free and budget options →</a>
         </p>
@@ -149,7 +149,7 @@
         <!-- ─── SETTING UP PROVIDERS ─── -->
         <h2>Setting up an AI provider</h2>
 
-        <h3>How do I set up Google AI Studio?</h3>
+        <h3 id="setup-google-ai-studio">How do I set up Google AI Studio?</h3>
         <ol>
           <li>Go to <a href="https://aistudio.google.com/" rel="noopener noreferrer">aistudio.google.com</a> and sign in with your Google account.</li>
           <li>Click <strong>Get API key</strong> → <strong>Create API key</strong>.</li>
@@ -160,7 +160,7 @@
           The free tier supports most models with per-minute and per-day request limits. See <a href="https://ai.google.dev/gemini-api/docs/rate-limits" rel="noopener noreferrer">Google's rate limit documentation</a> for current quotas per model.
         </p>
 
-        <h3>How do I set up OpenAI?</h3>
+        <h3 id="setup-openai">How do I set up OpenAI?</h3>
         <ol>
           <li>Create an account at <a href="https://platform.openai.com/" rel="noopener noreferrer">platform.openai.com</a>.</li>
           <li>Add a payment method under <strong>Billing</strong> and add some credits (a few dollars goes a long way).</li>
@@ -172,7 +172,7 @@
           OpenAI has no free tier on the API — you pay per token used. Conversation costs are typically fractions of a cent per exchange.
         </p>
 
-        <h3>How do I set up Anthropic?</h3>
+        <h3 id="setup-anthropic">How do I set up Anthropic?</h3>
         <ol>
           <li>Create an account at <a href="https://console.anthropic.com/" rel="noopener noreferrer">console.anthropic.com</a>.</li>
           <li>Add a payment method and purchase credits.</li>
@@ -181,7 +181,7 @@
           <li>Select <strong>Anthropic</strong> as your provider. Recommended model: <code>claude-haiku-4-5</code> (fast, affordable) or <code>claude-sonnet-4-6</code> (higher quality).</li>
         </ol>
 
-        <h3>How do I set up OpenRouter?</h3>
+        <h3 id="setup-openrouter">How do I set up OpenRouter?</h3>
         <p>
           <a href="https://openrouter.ai/" rel="noopener noreferrer">OpenRouter</a> is a unified API that routes to dozens of AI providers — including Google, Anthropic, Meta, and Mistral — from a single account and key. It's the most flexible option.
         </p>
@@ -196,7 +196,7 @@
         <!-- ─── TROUBLESHOOTING ─── -->
         <h2>Troubleshooting</h2>
 
-        <h3>Why am I being rate limited by Google?</h3>
+        <h3 id="rate-limits-google">Why am I being rate limited by Google?</h3>
         <p>
           Google AI Studio's free tier enforces per-minute (RPM) and per-day (RPD) limits on each model. These limits are quite low on the free tier — for example, Gemini 2.5 Pro is capped at just a few requests per minute on free accounts.
         </p>
@@ -216,7 +216,7 @@
         <!-- ─── FREE OPTIONS ─── -->
         <h2 id="free-options">Free and budget options</h2>
 
-        <h3>How do I use Patter for free with OpenRouter?</h3>
+        <h3 id="free-openrouter">How do I use Patter for free with OpenRouter?</h3>
         <p>
           OpenRouter offers a selection of models completely free of charge — no credits required. These are marked with a <code>:free</code> suffix on the model ID (for example, <code>meta-llama/llama-3.3-70b-instruct:free</code>).
         </p>
@@ -224,7 +224,7 @@
           To use them, set up an OpenRouter account and API key as described above, then — when selecting a model in Patter — look for models with <strong>Free</strong> indicated. You can also browse the full list of free models at <a href="https://openrouter.ai/models?q=free" rel="noopener noreferrer">openrouter.ai/models</a>.
         </p>
 
-        <h3>What are the downsides of free models?</h3>
+        <h3 id="free-models-downsides">What are the downsides of free models?</h3>
         <p>Free-tier models on OpenRouter work well for casual use, but there are trade-offs:</p>
         <ul>
           <li><strong>Rate limits</strong> — free models are typically capped at 20 requests per minute and 200 per day.</li>
@@ -274,17 +274,17 @@
         <!-- ─── THE APP ─── -->
         <h2>The app</h2>
 
-        <h3>What languages does Patter support?</h3>
+        <h3 id="supported-languages">What languages does Patter support?</h3>
         <p>
           Patter supports 11 languages with dialect precision: English (US/GB), Spanish (Castilian/Latin American), Portuguese (European/Brazilian), French (France/Canadian), German, Italian, Japanese, Mandarin, Korean, Russian, and Romanian.
         </p>
 
-        <h3>What CEFR levels are supported?</h3>
+        <h3 id="cefr-levels">What CEFR levels are supported?</h3>
         <p>
           A1 through C1. You can switch your level at any time mid-conversation — the AI persona's vocabulary, grammar complexity, and patience adjust immediately without resetting the conversation.
         </p>
 
-        <h3>How do corrections work?</h3>
+        <h3 id="how-corrections-work">How do corrections work?</h3>
         <p>
           When you make a grammar or vocabulary mistake, a small note appears beneath your message showing what was wrong, the corrected form, and a one-line explanation. These corrections are generated by the same AI model handling your conversation — they are not a separate grammar-checking service.
         </p>
@@ -299,7 +299,7 @@
           Patter is designed for iPhone. It may run on iPad in iPhone compatibility mode, but the interface is not optimised for the larger screen.
         </p>
 
-        <h3>Where is my data stored?</h3>
+        <h3 id="data-storage-privacy">Where is my data stored?</h3>
         <p>
           Conversations are stored locally on your device via SwiftData. Your API key is stored exclusively in the iOS Keychain. Nothing is sent to a developer-owned server — all network traffic goes directly from your device to your chosen AI provider. See the <a href="/patter/PRIVACY.html">Privacy Policy</a> for full details.
         </p>
