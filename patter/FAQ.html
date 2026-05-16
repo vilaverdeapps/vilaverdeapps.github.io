@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ — Patter</title>
+  <meta name="description" content="Frequently asked questions about Patter: setting up AI providers, rate limits, recommended models, free options, and how the app works." />
+  <link rel="canonical" href="https://vilaverdeapps.github.io/patter/FAQ.html" />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="FAQ — Patter" />
+  <meta property="og:description" content="Answers to common questions about Patter: AI providers, rate limits, recommended models, and free options." />
+  <meta property="og:url" content="https://vilaverdeapps.github.io/patter/FAQ.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --bg-alt: #ece4d5;
+      --ink: #1f1a14;
+      --ink-soft: #5a4a38;
+      --ink-muted: #8a7a64;
+      --accent: #FF6A3D;
+      --line: rgba(31,26,20,0.12);
+      --serif: 'Newsreader', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --mono: 'Geist Mono', ui-monospace, monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); overflow-x: hidden; }
+
+    .skip-link { position: absolute; top: -999px; left: 0; padding: 8px 16px; background: var(--ink); color: #fff; font-family: var(--sans); font-size: 14px; text-decoration: none; z-index: 100; }
+    .skip-link:focus { top: 0; }
+
+    /* Nav */
+    .pc-nav { display: flex; align-items: center; justify-content: space-between; padding: 24px 56px; border-bottom: 1px solid var(--line); }
+    .pc-nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+    .pc-nav-logo img { width: 32px; height: 32px; border-radius: 8px; display: block; }
+    .pc-nav-logo-name { font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: -0.3px; }
+    .pc-nav-right { display: flex; align-items: center; gap: 12px; }
+    .pc-nav-links { display: flex; align-items: center; gap: 32px; font-family: var(--sans); font-size: 13.5px; color: var(--ink-soft); }
+    .pc-nav-links a { text-decoration: none; color: inherit; }
+    .pc-nav-links a:hover { color: var(--ink); }
+    .pc-nav-cta { font-family: var(--sans); font-size: 13px; font-weight: 600; color: #fff !important; background: var(--ink); padding: 9px 16px; border-radius: 999px; white-space: nowrap; text-decoration: none; }
+
+    /* Prose */
+    .pc-prose-wrap { max-width: 800px; margin: 0 auto; padding: 64px 56px 96px; }
+    .pc-back { display: inline-block; font-family: var(--sans); font-size: 13px; color: var(--ink-muted); text-decoration: none; margin-bottom: 48px; }
+    .pc-back:hover { color: var(--ink); }
+    .pc-prose-wrap h1 { font-family: var(--serif); font-size: 52px; font-weight: 400; letter-spacing: -1.2px; line-height: 1.0; margin: 0 0 12px; color: var(--ink); }
+    .pc-prose-wrap .meta { font-family: var(--sans); font-size: 14px; color: var(--ink-muted); margin: 0 0 48px; }
+    .pc-prose-wrap h2 { font-family: var(--serif); font-size: 30px; font-weight: 500; letter-spacing: -0.5px; margin: 56px 0 24px; color: var(--ink); border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+    .pc-prose-wrap h3 { font-family: var(--serif); font-size: 21px; font-weight: 500; margin: 36px 0 10px; color: var(--ink); }
+    .pc-prose-wrap p { font-family: var(--serif); font-size: 17px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 16px; }
+    .pc-prose-wrap li { font-family: var(--serif); font-size: 17px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 10px; }
+    .pc-prose-wrap ul, .pc-prose-wrap ol { padding-left: 1.5em; margin: 0 0 16px; }
+    .pc-prose-wrap strong { color: var(--ink); }
+    .pc-prose-wrap a { color: var(--accent); }
+    .pc-prose-wrap em { font-style: italic; }
+    .pc-prose-wrap code { font-family: var(--mono); font-size: 13px; background: var(--bg-alt); padding: 2px 6px; border-radius: 4px; color: var(--ink); }
+    .pc-prose-wrap hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+
+    /* Model cards */
+    .model-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0 24px; }
+    .model-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+    .model-card-name { font-family: var(--serif); font-size: 17px; font-weight: 500; color: var(--ink); }
+    .model-card-id { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); }
+    .model-card-note { font-family: var(--sans); font-size: 13px; color: var(--ink-soft); line-height: 1.4; margin-top: 4px; }
+    .model-card a { color: var(--accent); font-family: var(--sans); font-size: 12px; text-decoration: none; margin-top: auto; padding-top: 8px; }
+    .model-card a:hover { text-decoration: underline; }
+
+    /* Warning callout */
+    .callout { background: var(--bg-alt); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 16px 0 20px; }
+    .callout p { margin: 0; font-size: 15px; }
+
+    /* Footer */
+    .pc-footer { padding: 48px 56px; background: var(--bg); border-top: 1px solid var(--line); }
+    .pc-footer-inner { max-width: 1280px; margin: 0 auto; }
+    .pc-footer-links { display: flex; gap: 24px; margin-bottom: 12px; }
+    .pc-footer-links a { font-family: var(--sans); font-size: 12.5px; color: var(--ink-muted); text-decoration: none; }
+    .pc-footer-links a:hover { color: var(--ink); }
+    .pc-footer-copy { font-family: var(--sans); font-size: 12.5px; color: var(--ink-muted); margin: 0 0 8px; }
+    .pc-footer-legal { font-family: var(--sans); font-size: 11px; color: var(--ink-muted); line-height: 1.7; margin: 0; }
+
+    @media (max-width: 900px) {
+      .pc-nav { padding: 18px 32px; }
+      .pc-prose-wrap { padding: 48px 32px 72px; }
+      .pc-footer { padding: 32px 32px; }
+      .model-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .pc-nav { padding: 14px 20px; }
+      .pc-nav-links { display: none; }
+      .pc-prose-wrap { padding: 32px 20px 56px; }
+      .pc-prose-wrap h1 { font-size: clamp(32px, 9vw, 44px); }
+      .pc-footer { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="pc-nav" aria-label="Primary">
+    <a class="pc-nav-logo" href="/patter/MARKETING.html">
+      <img src="/assets/patter-icon.png" alt="" />
+      <span class="pc-nav-logo-name">Patter</span>
+    </a>
+    <div class="pc-nav-right">
+      <div class="pc-nav-links">
+        <a href="/patter/MARKETING.html#features">Features</a>
+        <a href="/patter/MARKETING.html#languages">Languages</a>
+        <a href="/patter/PRIVACY.html">Privacy</a>
+        <a href="/patter/SUPPORT.html">Support</a>
+      </div>
+      <a class="pc-nav-cta" href="https://apps.apple.com/us/app/patter-language-learning/id6762643113">Get the app</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="pc-prose-wrap">
+      <a class="pc-back" href="/patter/MARKETING.html">← Back to home</a>
+      <article>
+        <h1>FAQ</h1>
+        <p class="meta">Frequently asked questions about Patter.</p>
+
+        <!-- ─── GETTING STARTED ─── -->
+        <h2>Getting started</h2>
+
+        <h3>What is Patter?</h3>
+        <p>
+          Patter is a serverless iOS language-learning app. You create AI contacts — each with a name, backstory, and personality — and text them. They reply only in the language you're learning. When you make a grammar mistake, a quiet correction appears below your message. No drills, no vocabulary decks, no account required.
+        </p>
+
+        <h3>What does BYOK mean?</h3>
+        <p>
+          BYOK stands for <strong>Bring Your Own Key</strong>. Patter has no backend server — instead, you sign up directly with an AI provider (Google AI Studio, OpenAI, Anthropic, or OpenRouter), get an API key, and paste it into the app. Messages go from your iPhone straight to the provider. The developer never sees your conversations or your key.
+        </p>
+
+        <h3>Which AI provider should I start with?</h3>
+        <p>
+          <strong>Google AI Studio</strong> is the easiest starting point — it has a generous free tier and requires no billing information to begin. If you run into rate limits (common with heavy use), OpenRouter with a small credit top-up gives you access to many models from one account. <a href="#free-options">See all free and budget options →</a>
+        </p>
+
+        <!-- ─── SETTING UP PROVIDERS ─── -->
+        <h2>Setting up an AI provider</h2>
+
+        <h3>How do I set up Google AI Studio?</h3>
+        <ol>
+          <li>Go to <a href="https://aistudio.google.com/" rel="noopener noreferrer">aistudio.google.com</a> and sign in with your Google account.</li>
+          <li>Click <strong>Get API key</strong> → <strong>Create API key</strong>.</li>
+          <li>Copy the key and paste it into Patter under <strong>Settings → API Key</strong>.</li>
+          <li>Select <strong>Google AI Studio</strong> as your provider and choose a model (Gemini 2.5 Flash is a good default).</li>
+        </ol>
+        <p>
+          The free tier supports most models with per-minute and per-day request limits. See <a href="https://ai.google.dev/gemini-api/docs/rate-limits" rel="noopener noreferrer">Google's rate limit documentation</a> for current quotas per model.
+        </p>
+
+        <h3>How do I set up OpenAI?</h3>
+        <ol>
+          <li>Create an account at <a href="https://platform.openai.com/" rel="noopener noreferrer">platform.openai.com</a>.</li>
+          <li>Add a payment method under <strong>Billing</strong> and add some credits (a few dollars goes a long way).</li>
+          <li>Go to <strong>API keys</strong> → <strong>Create new secret key</strong>.</li>
+          <li>Copy the key and paste it into Patter under <strong>Settings → API Key</strong>.</li>
+          <li>Select <strong>OpenAI</strong> as your provider. Recommended models: <code>gpt-4o-mini</code> (fast and cheap) or <code>gpt-4o</code> (best quality).</li>
+        </ol>
+        <p>
+          OpenAI has no free tier on the API — you pay per token used. Conversation costs are typically fractions of a cent per exchange.
+        </p>
+
+        <h3>How do I set up Anthropic?</h3>
+        <ol>
+          <li>Create an account at <a href="https://console.anthropic.com/" rel="noopener noreferrer">console.anthropic.com</a>.</li>
+          <li>Add a payment method and purchase credits.</li>
+          <li>Go to <strong>API Keys</strong> → <strong>Create Key</strong>.</li>
+          <li>Copy the key and paste it into Patter under <strong>Settings → API Key</strong>.</li>
+          <li>Select <strong>Anthropic</strong> as your provider. Recommended model: <code>claude-haiku-4-5</code> (fast, affordable) or <code>claude-sonnet-4-6</code> (higher quality).</li>
+        </ol>
+
+        <h3>How do I set up OpenRouter?</h3>
+        <p>
+          <a href="https://openrouter.ai/" rel="noopener noreferrer">OpenRouter</a> is a unified API that routes to dozens of AI providers — including Google, Anthropic, Meta, and Mistral — from a single account and key. It's the most flexible option.
+        </p>
+        <ol>
+          <li>Create an account at <a href="https://openrouter.ai/" rel="noopener noreferrer">openrouter.ai</a>.</li>
+          <li>Optionally add credits under <strong>Credits</strong> (or use the free tier — see below).</li>
+          <li>Go to <strong>Keys</strong> → <strong>Create Key</strong>.</li>
+          <li>In Patter, go to <strong>Settings → API Key</strong>, select <strong>OpenRouter</strong> as your provider, and paste your key.</li>
+          <li>Choose your preferred model from the model list.</li>
+        </ol>
+
+        <!-- ─── TROUBLESHOOTING ─── -->
+        <h2>Troubleshooting</h2>
+
+        <h3>Why am I being rate limited by Google?</h3>
+        <p>
+          Google AI Studio's free tier enforces per-minute (RPM) and per-day (RPD) limits on each model. These limits are quite low on the free tier — for example, Gemini 2.5 Pro is capped at just a few requests per minute on free accounts.
+        </p>
+        <p>
+          Patter sends your full conversation history with each message, which means even a short chat can count as multiple large requests. If you're hitting rate limits:
+        </p>
+        <ul>
+          <li><strong>Wait a minute</strong> and try again — per-minute limits reset quickly.</li>
+          <li><strong>Switch to a faster model</strong> with higher free limits, such as Gemini 2.5 Flash.</li>
+          <li><strong>Enable billing</strong> on your Google AI account at <a href="https://aistudio.google.com/" rel="noopener noreferrer">aistudio.google.com</a> — paid usage has significantly higher limits.</li>
+          <li><strong>Switch to OpenRouter</strong> — even with free models, you're spread across different providers' limits.</li>
+        </ul>
+        <div class="callout">
+          <p>Rate limits are per API key, not per app. If you use your key in multiple places, all usage counts toward the same quota.</p>
+        </div>
+
+        <!-- ─── FREE OPTIONS ─── -->
+        <h2 id="free-options">Free and budget options</h2>
+
+        <h3>How do I use Patter for free with OpenRouter?</h3>
+        <p>
+          OpenRouter offers a selection of models completely free of charge — no credits required. These are marked with a <code>:free</code> suffix on the model ID (for example, <code>meta-llama/llama-3.3-70b-instruct:free</code>).
+        </p>
+        <p>
+          To use them, set up an OpenRouter account and API key as described above, then — when selecting a model in Patter — look for models with <strong>Free</strong> indicated. You can also browse the full list of free models at <a href="https://openrouter.ai/models?q=free" rel="noopener noreferrer">openrouter.ai/models</a>.
+        </p>
+
+        <h3>What are the downsides of free models?</h3>
+        <p>Free-tier models on OpenRouter work well for casual use, but there are trade-offs:</p>
+        <ul>
+          <li><strong>Rate limits</strong> — free models are typically capped at 20 requests per minute and 200 per day.</li>
+          <li><strong>Slower responses</strong> — free requests are lower priority and may queue behind paid traffic during peak hours.</li>
+          <li><strong>Older or smaller models</strong> — free versions are usually not the latest or largest variant, which means lower fluency and less nuanced corrections.</li>
+          <li><strong>Smaller context windows</strong> — some free models accept fewer tokens, which can cause older parts of a long conversation to be dropped.</li>
+          <li><strong>No guarantees</strong> — free models can be removed or changed without notice.</li>
+        </ul>
+        <p>
+          For regular daily practice, adding a small credit top-up ($5–10) gives much better reliability and unlocks significantly better models.
+        </p>
+
+        <!-- ─── RECOMMENDED MODELS ─── -->
+        <h2>Recommended models on OpenRouter</h2>
+
+        <p>These are the models we recommend for language learning on OpenRouter. All offer strong multilingual fluency, good instruction following, and reliable in-character behaviour.</p>
+
+        <div class="model-grid">
+          <div class="model-card">
+            <div class="model-card-name">Gemini Pro (Latest)</div>
+            <div class="model-card-id">google/gemini-pro-latest</div>
+            <div class="model-card-note">Google's flagship Gemini Pro model, always pointing to the latest stable release. Excellent multilingual coverage and long context support.</div>
+            <a href="https://openrouter.ai/google/gemini-pro-latest" rel="noopener noreferrer">View on OpenRouter →</a>
+          </div>
+          <div class="model-card">
+            <div class="model-card-name">Claude Sonnet 4.6</div>
+            <div class="model-card-id">anthropic/claude-sonnet-4-6</div>
+            <div class="model-card-note">Anthropic's mid-tier model. Exceptional at following persona instructions and producing natural, nuanced corrections in European languages.</div>
+            <a href="https://openrouter.ai/anthropic/claude-sonnet-4-6" rel="noopener noreferrer">View on OpenRouter →</a>
+          </div>
+          <div class="model-card">
+            <div class="model-card-name">Qwen 3 235B</div>
+            <div class="model-card-id">qwen/qwen3-235b-a22b</div>
+            <div class="model-card-note">Alibaba's large mixture-of-experts model. Strong CJK language support (Chinese, Japanese, Korean) and competitive multilingual performance at a low cost per token.</div>
+            <a href="https://openrouter.ai/qwen/qwen3-235b-a22b" rel="noopener noreferrer">View on OpenRouter →</a>
+          </div>
+          <div class="model-card">
+            <div class="model-card-name">Llama 3.3 70B</div>
+            <div class="model-card-id">meta-llama/llama-3.3-70b-instruct</div>
+            <div class="model-card-note">Meta's open-weight model. Solid all-around multilingual performance, widely available on the free tier, and very fast for its size.</div>
+            <a href="https://openrouter.ai/meta-llama/llama-3.3-70b-instruct" rel="noopener noreferrer">View on OpenRouter →</a>
+          </div>
+        </div>
+
+        <p>Model availability and pricing on OpenRouter can change. Check the <a href="https://openrouter.ai/models" rel="noopener noreferrer">OpenRouter model list</a> for current status before committing to a model.</p>
+
+        <!-- ─── THE APP ─── -->
+        <h2>The app</h2>
+
+        <h3>What languages does Patter support?</h3>
+        <p>
+          Patter supports 11 languages with dialect precision: English (US/GB), Spanish (Castilian/Latin American), Portuguese (European/Brazilian), French (France/Canadian), German, Italian, Japanese, Mandarin, Korean, Russian, and Romanian.
+        </p>
+
+        <h3>What CEFR levels are supported?</h3>
+        <p>
+          A1 through C1. You can switch your level at any time mid-conversation — the AI persona's vocabulary, grammar complexity, and patience adjust immediately without resetting the conversation.
+        </p>
+
+        <h3>How do corrections work?</h3>
+        <p>
+          When you make a grammar or vocabulary mistake, a small note appears beneath your message showing what was wrong, the corrected form, and a one-line explanation. These corrections are generated by the same AI model handling your conversation — they are not a separate grammar-checking service.
+        </p>
+
+        <h3>Does Patter work offline?</h3>
+        <p>
+          No. Every message requires a live connection to your AI provider's API. Your past conversations are stored on your device and readable offline, but sending new messages requires an internet connection.
+        </p>
+
+        <h3>Can I use Patter on iPad?</h3>
+        <p>
+          Patter is designed for iPhone. It may run on iPad in iPhone compatibility mode, but the interface is not optimised for the larger screen.
+        </p>
+
+        <h3>Where is my data stored?</h3>
+        <p>
+          Conversations are stored locally on your device via SwiftData. Your API key is stored exclusively in the iOS Keychain. Nothing is sent to a developer-owned server — all network traffic goes directly from your device to your chosen AI provider. See the <a href="/patter/PRIVACY.html">Privacy Policy</a> for full details.
+        </p>
+
+        <hr />
+
+        <p>
+          <em>Don't see your question here? Open a <a href="https://github.com/vilaverdeapps/patter/issues/new">GitHub issue</a> and we'll add it.</em>
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="pc-footer">
+    <div class="pc-footer-inner">
+      <div class="pc-footer-links">
+        <a href="/patter/MARKETING.html">Home</a>
+        <a href="/patter/FAQ.html">FAQ</a>
+        <a href="/patter/PRIVACY.html">Privacy</a>
+        <a href="/patter/SUPPORT.html">Support</a>
+        <a href="https://github.com/vilaverdeapps/patter" rel="noopener noreferrer">GitHub</a>
+      </div>
+      <p class="pc-footer-copy">© 2026 vilaverdeapps — independent software from somewhere quiet.</p>
+      <p class="pc-footer-legal">
+        Patter is developed by vilaverdeapps and is not affiliated with, endorsed by, or sponsored by any third-party service referenced on this page.
+        Google and Gemini are trademarks of Google LLC. OpenAI is a trademark of OpenAI, L.L.C. Anthropic and Claude are trademarks of Anthropic, PBC.
+        Apple, App Store, iPhone, and iOS are trademarks of Apple Inc., registered in the U.S. and other countries.
+        Use of these names is solely to identify compatible services.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
