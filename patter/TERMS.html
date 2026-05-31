@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Use — Patter</title>
+  <meta name="description" content="Terms of Use for Patter: license, subscriptions, BYOK API key responsibilities, AI content disclaimers, and limitations." />
+  <link rel="canonical" href="https://apps.vilaverde.rocks/patter/TERMS.html" />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Terms of Use — Patter" />
+  <meta property="og:description" content="Terms of Use for Patter, a serverless language-learning app for iPhone." />
+  <meta property="og:url" content="https://apps.vilaverde.rocks/patter/TERMS.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f5f0e8;
+      --bg-alt: #ece4d5;
+      --ink: #1f1a14;
+      --ink-soft: #5a4a38;
+      --ink-muted: #8a7a64;
+      --accent: #FF6A3D;
+      --line: rgba(31,26,20,0.12);
+      --serif: 'Newsreader', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+      --mono: 'Geist Mono', ui-monospace, monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); overflow-x: hidden; }
+
+    /* Skip link */
+    .skip-link { position: absolute; top: -999px; left: 0; padding: 8px 16px; background: var(--ink); color: #fff; font-family: var(--sans); font-size: 14px; text-decoration: none; z-index: 100; }
+    .skip-link:focus { top: 0; }
+
+    /* Nav */
+    .pc-nav { display: flex; align-items: center; justify-content: space-between; padding: 24px 56px; border-bottom: 1px solid var(--line); }
+    .pc-nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+    .pc-nav-logo img { width: 32px; height: 32px; border-radius: 8px; display: block; }
+    .pc-nav-logo-name { font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: -0.3px; }
+    .pc-nav-right { display: flex; align-items: center; gap: 12px; }
+    .pc-nav-links { display: flex; align-items: center; gap: 32px; font-family: var(--sans); font-size: 13.5px; color: var(--ink-soft); }
+    .pc-nav-links a { text-decoration: none; color: inherit; }
+    .pc-nav-links a:hover { color: var(--ink); }
+    .pc-nav-cta { font-family: var(--sans); font-size: 13px; font-weight: 600; color: #fff !important; background: var(--ink); padding: 9px 16px; border-radius: 999px; white-space: nowrap; text-decoration: none; }
+
+    /* Prose */
+    .pc-prose-wrap { max-width: 800px; margin: 0 auto; padding: 64px 56px 96px; }
+    .pc-back { display: inline-block; font-family: var(--sans); font-size: 13px; color: var(--ink-muted); text-decoration: none; margin-bottom: 48px; }
+    .pc-back:hover { color: var(--ink); }
+    .pc-prose-wrap h1 { font-family: var(--serif); font-size: 52px; font-weight: 400; letter-spacing: -1.2px; line-height: 1.0; margin: 0 0 12px; color: var(--ink); }
+    .pc-prose-wrap .meta { font-family: var(--sans); font-size: 14px; color: var(--ink-muted); margin: 0 0 48px; }
+    .pc-prose-wrap h2 { font-family: var(--serif); font-size: 30px; font-weight: 500; letter-spacing: -0.5px; margin: 52px 0 16px; color: var(--ink); }
+    .pc-prose-wrap h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; margin: 36px 0 12px; color: var(--ink); }
+    .pc-prose-wrap p { font-family: var(--serif); font-size: 17px; line-height: 1.65; color: var(--ink-soft); margin: 0 0 20px; }
+    .pc-prose-wrap li { font-family: var(--serif); font-size: 17px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 10px; }
+    .pc-prose-wrap ul, .pc-prose-wrap ol { padding-left: 1.5em; margin: 0 0 20px; }
+    .pc-prose-wrap strong { color: var(--ink); }
+    .pc-prose-wrap a { color: var(--accent); }
+    .pc-prose-wrap hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+    .pc-prose-wrap em { font-style: italic; }
+    .pc-prose-wrap code { font-family: var(--mono); font-size: 14px; background: var(--bg-alt); padding: 2px 5px; border-radius: 4px; }
+
+    /* Footer */
+    .pc-footer { padding: 48px 56px; background: var(--bg); border-top: 1px solid var(--line); }
+    .pc-footer-inner { max-width: 1280px; margin: 0 auto; }
+    .pc-footer-links { display: flex; gap: 24px; margin-bottom: 12px; }
+    .pc-footer-links a { font-family: var(--sans); font-size: 12.5px; color: var(--ink-muted); text-decoration: none; }
+    .pc-footer-links a:hover { color: var(--ink); }
+    .pc-footer-copy { font-family: var(--sans); font-size: 12.5px; color: var(--ink-muted); margin: 0 0 8px; }
+    .pc-footer-legal { font-family: var(--sans); font-size: 11px; color: var(--ink-muted); line-height: 1.7; margin: 0; }
+
+    @media (max-width: 900px) {
+      .pc-nav { padding: 18px 32px; }
+      .pc-prose-wrap { padding: 48px 32px 72px; }
+      .pc-footer { padding: 32px 32px; }
+    }
+
+    @media (max-width: 600px) {
+      .pc-nav { padding: 14px 20px; }
+      .pc-nav-links { display: none; }
+      .pc-prose-wrap { padding: 32px 20px 56px; }
+      .pc-prose-wrap h1 { font-size: clamp(32px, 9vw, 44px); }
+      .pc-footer { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="pc-nav" aria-label="Primary">
+    <a class="pc-nav-logo" href="/patter/MARKETING.html">
+      <img src="/assets/patter-icon.png" alt="" />
+      <span class="pc-nav-logo-name">Patter</span>
+    </a>
+    <div class="pc-nav-right">
+      <div class="pc-nav-links">
+        <a href="/patter/MARKETING.html#features">Features</a>
+        <a href="/patter/MARKETING.html#languages">Languages</a>
+        <a href="/patter/FAQ.html">FAQ</a>
+        <a href="/patter/PRIVACY.html">Privacy</a>
+        <a href="/patter/TERMS.html">Terms</a>
+        <a href="/patter/SUPPORT.html">Support</a>
+      </div>
+      <a class="pc-nav-cta" href="https://apps.apple.com/us/app/patter-language-learning/id6762643113">Get the app</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="pc-prose-wrap">
+      <a class="pc-back" href="/patter/MARKETING.html">← Back to home</a>
+      <article>
+        <h1>Terms of Use</h1>
+        <p class="meta"><strong>Last updated:</strong> 31 May 2026</p>
+
+        <p>
+          These Terms of Use ("Terms") govern your use of <strong>Patter</strong> ("the app"), an iPhone
+          language-learning application published by <strong>vilaverdeapps</strong> ("we", "us", "our"). By
+          downloading, installing, or using the app, you agree to these Terms. If you do not agree, do not use
+          the app.
+        </p>
+        <p>
+          The app is also subject to the Apple Media Services Terms and Conditions and Apple's
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener noreferrer">Standard
+          End User License Agreement (EULA)</a>, which apply to all apps distributed via the App Store. Where these
+          Terms conflict with Apple's EULA for matters that EULA exclusively governs, Apple's EULA controls.
+        </p>
+
+        <hr />
+
+        <h2>1. Eligibility</h2>
+        <p>
+          You must be at least <strong>13 years old</strong> (or the minimum age of digital consent in your country,
+          whichever is higher) to use the app. The app is not directed to children. Parents and guardians should use
+          Apple's <strong>Screen Time</strong> and <strong>Family Sharing</strong> controls if needed.
+        </p>
+
+        <h2>2. License</h2>
+        <p>
+          We grant you a limited, personal, non-transferable, non-exclusive, revocable license to install and use
+          the app on Apple-branded devices that you own or control, solely for your personal, non-commercial
+          language-learning use, and subject to these Terms and Apple's EULA.
+        </p>
+        <p>You may not:</p>
+        <ul>
+          <li>copy, modify, reverse-engineer, decompile, or disassemble the app, except where permitted by law;</li>
+          <li>rent, lease, lend, sell, redistribute, or sublicense the app;</li>
+          <li>use the app to build a competing product or to train machine-learning models;</li>
+          <li>circumvent subscription, rate-limit, or entitlement mechanisms.</li>
+        </ul>
+
+        <h2>3. Subscriptions and in-app purchases</h2>
+        <p>
+          The app offers optional <strong>auto-renewing subscriptions</strong> processed by Apple's App Store.
+        </p>
+        <ul>
+          <li>
+            <strong>Auto-renewal:</strong> Subscriptions renew automatically at the end of each period at the
+            then-current price unless canceled at least 24 hours before the end of the current period.
+          </li>
+          <li>
+            <strong>Payment:</strong> Payment is charged to your Apple ID at confirmation of purchase. Renewals are
+            charged within 24 hours prior to the end of the current period.
+          </li>
+          <li>
+            <strong>Manage / cancel:</strong> Manage or cancel subscriptions in
+            <strong>iOS Settings → Apple ID → Subscriptions</strong>. Deleting the app does not cancel a
+            subscription.
+          </li>
+          <li>
+            <strong>Refunds:</strong> Refunds are handled by Apple under their refund policy at
+            <a href="https://support.apple.com/HT204084" rel="noopener noreferrer">reportaproblem.apple.com</a>.
+            We do not process refunds directly.
+          </li>
+          <li>
+            <strong>Free trials:</strong> If offered, any unused portion of a free trial is forfeited when you
+            purchase a subscription.
+          </li>
+          <li>
+            <strong>Price changes:</strong> We may change subscription prices. You will be notified through the
+            App Store before any price increase takes effect and given the chance to cancel.
+          </li>
+        </ul>
+
+        <h2>4. Bring-your-own-key (BYOK) and third-party AI providers</h2>
+        <p>
+          The app requires you to provide your own API key (or sign in with your own account) from a third-party
+          AI/LLM provider such as Google AI Studio (Gemini), OpenAI, Anthropic, or a compatible provider.
+        </p>
+        <ul>
+          <li>
+            <strong>You are responsible for all charges</strong> incurred by your use of third-party AI providers.
+            These charges are billed directly by the provider, not by us. Subscription to the app does not include
+            or cover AI provider usage costs.
+          </li>
+          <li>
+            <strong>You are responsible for complying</strong> with the terms of service, acceptable-use policies,
+            and rate limits of each provider whose key or account you use.
+          </li>
+          <li>
+            <strong>We do not control</strong> the availability, accuracy, latency, content moderation, or pricing
+            of third-party AI providers. We are not liable for provider outages, account suspensions, billing
+            disputes, or changes to provider APIs.
+          </li>
+          <li>
+            <strong>Key security:</strong> Your API key is stored locally in the iOS Keychain. You are responsible
+            for safeguarding your device passcode and Apple ID.
+          </li>
+        </ul>
+
+        <h2>5. AI-generated content</h2>
+        <p>
+          The app generates text using third-party AI models. AI-generated content may be inaccurate, incomplete,
+          biased, or inappropriate. You acknowledge that:
+        </p>
+        <ul>
+          <li>
+            <strong>No professional advice.</strong> Content is provided for language-learning purposes only and is
+            <strong>not</strong> medical, legal, financial, psychological, educational-certification, or
+            professional advice.
+          </li>
+          <li>
+            <strong>No guarantee of accuracy.</strong> Grammar corrections, translations, and explanations may
+            contain errors. Do not rely on the app as a sole source for exams, official communications, or
+            translation of important documents.
+          </li>
+          <li>
+            <strong>No fluency guarantee.</strong> Use of the app does not guarantee any particular level of
+            language proficiency or CEFR certification.
+          </li>
+          <li>
+            <strong>Your responsibility.</strong> You are responsible for evaluating the appropriateness of
+            generated content before relying on or sharing it.
+          </li>
+        </ul>
+
+        <h2>6. Acceptable use</h2>
+        <p>You agree not to use the app to:</p>
+        <ul>
+          <li>violate any law, regulation, or third-party right;</li>
+          <li>generate, store, or share content that is illegal, harmful, harassing, defamatory, sexually explicit
+              involving minors, or that incites violence;</li>
+          <li>attempt to extract system prompts, jailbreak AI safeguards, or generate prohibited content;</li>
+          <li>interfere with the app's operation, security, or other users' access;</li>
+          <li>use the app to send spam or automated bulk requests beyond personal use.</li>
+        </ul>
+
+        <h2>7. Privacy</h2>
+        <p>
+          Our handling of personal data is described in the
+          <a href="/patter/PRIVACY.html">Privacy Policy</a>. By using the app, you also agree to that policy.
+        </p>
+
+        <h2>8. Updates and changes to the app</h2>
+        <p>
+          We may release updates, add or remove features, or discontinue the app at any time. Some features may
+          depend on third-party services that change or become unavailable. We are not obligated to maintain
+          backwards compatibility with prior versions, AI models, or providers.
+        </p>
+
+        <h2>9. Termination</h2>
+        <p>
+          You may stop using the app at any time by deleting it. We may suspend or terminate your license if you
+          breach these Terms. On termination, your right to use the app ceases; sections that by their nature
+          should survive (disclaimers, limitation of liability, governing law) will survive.
+        </p>
+
+        <h2>10. Disclaimer of warranties</h2>
+        <p>
+          THE APP IS PROVIDED <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong>, WITHOUT WARRANTY OF
+          ANY KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+          PARTICULAR PURPOSE, ACCURACY, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED,
+          ERROR-FREE, SECURE, OR THAT AI-GENERATED CONTENT WILL BE ACCURATE OR FREE OF OFFENSIVE MATERIAL. SOME
+          JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO SOME OF THE ABOVE EXCLUSIONS MAY NOT
+          APPLY TO YOU.
+        </p>
+
+        <h2>11. Limitation of liability</h2>
+        <p>
+          TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT WILL VILAVERDEAPPS OR ITS PRINCIPALS BE LIABLE FOR
+          ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA,
+          GOODWILL, OR THIRD-PARTY AI PROVIDER CHARGES, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE APP,
+          WHETHER BASED ON WARRANTY, CONTRACT, TORT, OR ANY OTHER LEGAL THEORY, EVEN IF ADVISED OF THE POSSIBILITY
+          OF SUCH DAMAGES.
+        </p>
+        <p>
+          OUR TOTAL AGGREGATE LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THE APP SHALL NOT EXCEED THE
+          GREATER OF (A) THE AMOUNTS YOU PAID TO US FOR THE APP IN THE 12 MONTHS PRECEDING THE CLAIM, OR (B) USD 50.
+        </p>
+        <p>
+          Nothing in these Terms excludes or limits liability that cannot be excluded or limited under applicable
+          law, including liability for gross negligence, wilful misconduct, or statutory consumer rights.
+        </p>
+
+        <h2>12. Indemnification</h2>
+        <p>
+          You agree to indemnify and hold harmless vilaverdeapps from any claims, damages, or expenses (including
+          reasonable legal fees) arising from your misuse of the app, your violation of these Terms, your violation
+          of any third-party AI provider's terms, or content you generate or submit through the app.
+        </p>
+
+        <h2>13. Apple-specific terms</h2>
+        <ul>
+          <li>These Terms are between you and vilaverdeapps. Apple is not a party.</li>
+          <li>
+            Apple is not responsible for the app or its content. Apple has no obligation to provide maintenance or
+            support for the app.
+          </li>
+          <li>
+            In the event of any failure of the app to conform to any applicable warranty, you may notify Apple,
+            and Apple will refund the purchase price (if any) for the app. To the maximum extent permitted by law,
+            Apple will have no other warranty obligation with respect to the app.
+          </li>
+          <li>
+            Apple and Apple's subsidiaries are third-party beneficiaries of these Terms and may enforce them
+            against you.
+          </li>
+        </ul>
+
+        <h2>14. Governing law and dispute resolution</h2>
+        <p>
+          These Terms are governed by the laws of the <strong>State of Connecticut, United States</strong>, without
+          regard to its conflict-of-laws rules. The state and federal courts located in Connecticut shall have
+          non-exclusive jurisdiction over any dispute arising out of or relating to these Terms, and you consent to
+          the personal jurisdiction of those courts.
+        </p>
+        <p>
+          If you are a consumer resident outside the United States (including in the European Union, United
+          Kingdom, or other jurisdictions with mandatory consumer-protection laws), you retain the protection of
+          the mandatory provisions of the law of your country of residence, and may bring proceedings in the
+          competent courts of that country where required by law.
+        </p>
+
+        <h2>15. Changes to these Terms</h2>
+        <p>
+          We may update these Terms to reflect product, legal, or App Store changes. The <strong>Last updated</strong>
+          date at the top will change when we do. Continued use of the app after changes means you accept the
+          updated Terms.
+        </p>
+
+        <h2>16. Contact</h2>
+        <p>
+          Questions about these Terms? Open an issue in the public repository:
+          <a href="https://github.com/vilaverdeapps/patter">vilaverdeapps/patter</a>.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="pc-footer">
+    <div class="pc-footer-inner">
+      <div class="pc-footer-links">
+        <a href="/patter/MARKETING.html">Home</a>
+        <a href="/patter/FAQ.html">FAQ</a>
+        <a href="/patter/PRIVACY.html">Privacy</a>
+        <a href="/patter/TERMS.html">Terms</a>
+        <a href="/patter/SUPPORT.html">Support</a>
+        <a href="https://github.com/vilaverdeapps/patter" rel="noopener noreferrer">GitHub</a>
+      </div>
+      <p class="pc-footer-copy">© 2026 vilaverdeapps — independent software from somewhere quiet.</p>
+      <p class="pc-footer-legal">
+        Patter is developed by vilaverdeapps and is not affiliated with, endorsed by, or sponsored by any third-party service referenced on this page.
+        Google and Gemini are trademarks of Google LLC.
+        OpenAI is a trademark of OpenAI, L.L.C.
+        Anthropic and Claude are trademarks of Anthropic, PBC.
+        Apple, App Store, iPhone, and iOS are trademarks of Apple Inc., registered in the U.S. and other countries.
+        Use of these names is solely to identify compatible services.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

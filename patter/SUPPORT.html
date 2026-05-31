@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Support — Patter</title>
   <meta name="description" content="Requirements, troubleshooting, and how to report issues for Patter on iPhone. Serverless AI language-learning app." />
-  <link rel="canonical" href="https://vilaverdeapps.github.io/patter/SUPPORT.html" />
+  <link rel="canonical" href="https://apps.vilaverde.rocks/patter/SUPPORT.html" />
   <meta name="robots" content="index,follow" />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Support — Patter" />
   <meta property="og:description" content="Help for Patter: requirements and how to report a problem or request a feature." />
-  <meta property="og:url" content="https://vilaverdeapps.github.io/patter/SUPPORT.html" />
+  <meta property="og:url" content="https://apps.vilaverde.rocks/patter/SUPPORT.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -95,6 +95,7 @@
         <a href="/patter/MARKETING.html#languages">Languages</a>
         <a href="/patter/FAQ.html">FAQ</a>
         <a href="/patter/PRIVACY.html">Privacy</a>
+        <a href="/patter/TERMS.html">Terms</a>
         <a href="/patter/SUPPORT.html">Support</a>
       </div>
       <a class="pc-nav-cta" href="https://apps.apple.com/us/app/patter-language-learning/id6762643113">Get the app</a>
@@ -108,15 +109,20 @@
         <h1>Support</h1>
 
         <p>
-          <strong>Patter</strong> is a serverless, AI-powered language-learning iPhone app. Chat with AI personas
-          who stay in character, get real-time grammar corrections, and learn at your CEFR level — all without an
-          account or a developer backend. Everything runs on your device using your own API key.
+          <strong>Patter</strong> is a local-first, AI-powered language-learning iPhone app. Chat with AI personas
+          who stay in character, get real-time grammar corrections, and learn at your CEFR level. Conversations
+          are stored on your device. You can either bring your own API key (BYOK) or subscribe to the optional
+          <strong>PatterAI</strong> managed-AI plan, which uses a Cloudflare Worker to authenticate requests and
+          track credits without retaining message content.
         </p>
 
         <h2>Requirements</h2>
         <ul>
           <li><strong>iPhone</strong> with <strong>iOS 18.6</strong> or later</li>
-          <li>A supported LLM provider account and API key (Google AI Studio, OpenAI, or Anthropic)</li>
+          <li>
+            One of: an API key from a supported provider (Google AI Studio, OpenAI, Anthropic, OpenRouter, Grok/xAI,
+            or any OpenAI-compatible endpoint), <em>or</em> a PatterAI subscription
+          </li>
           <li>Designed for iPhone; iPad may run the app in compatibility mode depending on your device</li>
         </ul>
 
@@ -138,22 +144,42 @@
           the app's App Store product page.
         </p>
 
-        <h2>API key issues</h2>
+        <h2>API key issues (BYOK)</h2>
         <p>
-          Patter is serverless — your API key is stored in the iOS Keychain and used directly to call your chosen
-          LLM provider's API from your device. If you're having trouble with API access:
+          When you use Patter with your own API key, the key is stored in the iOS Keychain and used directly to
+          call your chosen LLM provider's API from your device — no developer-owned server is involved. If you're
+          having trouble with API access:
         </p>
         <ul>
           <li>Verify your API key is valid by testing it with the provider's own tools.</li>
           <li>Check that your provider account has sufficient balance or free-tier quota.</li>
-          <li>Ensure you're using a supported provider (Google AI Studio, OpenAI, or Anthropic).</li>
+          <li>
+            Ensure you're using a supported provider: Google AI Studio (Gemini), OpenAI, Anthropic, OpenRouter,
+            Grok/xAI, or any OpenAI-compatible endpoint.
+          </li>
+        </ul>
+
+        <h2>PatterAI subscription issues</h2>
+        <p>
+          The optional PatterAI plan routes requests through a Cloudflare Worker that authenticates your
+          subscription and tracks credits. If PatterAI requests are failing:
+        </p>
+        <ul>
+          <li>Open Settings → Subscription and confirm your PatterAI subscription is active.</li>
+          <li>Tap <strong>Restore Purchases</strong> if you reinstalled the app or signed in on a new device.</li>
+          <li>Check your remaining credit balance in Settings.</li>
+          <li>
+            Manage or cancel the subscription in <strong>iOS Settings → Apple ID → Subscriptions</strong>.
+            Refunds are handled by Apple at <a href="https://support.apple.com/HT204084">reportaproblem.apple.com</a>.
+          </li>
         </ul>
 
         <h2>Privacy</h2>
         <p>
-          Patter is serverless — no data leaves your device except the messages you send to your LLM provider.
-          Conversations are stored locally via SwiftData; API keys are stored exclusively in the iOS Keychain.
-          For full details, see the <a href="/patter/PRIVACY.html">Privacy Policy</a>.
+          Conversations are stored locally on your device via SwiftData; API keys are stored exclusively in the
+          iOS Keychain. With BYOK, messages go straight from your phone to the provider. With PatterAI, requests
+          pass through a Cloudflare Worker for authentication and credit tracking — no message content is logged
+          or retained by the Worker. For full details, see the <a href="/patter/PRIVACY.html">Privacy Policy</a>.
         </p>
 
         <h2>Trademark</h2>
@@ -179,6 +205,7 @@
         <a href="/patter/MARKETING.html">Home</a>
         <a href="/patter/FAQ.html">FAQ</a>
         <a href="/patter/PRIVACY.html">Privacy</a>
+        <a href="/patter/TERMS.html">Terms</a>
         <a href="/patter/SUPPORT.html">Support</a>
         <a href="https://github.com/vilaverdeapps/patter" rel="noopener noreferrer">GitHub</a>
       </div>

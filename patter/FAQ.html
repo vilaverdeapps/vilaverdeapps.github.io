@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FAQ — Patter</title>
   <meta name="description" content="Frequently asked questions about Patter: setting up AI providers, rate limits, recommended models, free options, and how the app works." />
-  <link rel="canonical" href="https://vilaverdeapps.github.io/patter/FAQ.html" />
+  <link rel="canonical" href="https://apps.vilaverde.rocks/patter/FAQ.html" />
   <meta name="robots" content="index,follow" />
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="FAQ — Patter" />
   <meta property="og:description" content="Answers to common questions about Patter: AI providers, rate limits, recommended models, and free options." />
-  <meta property="og:url" content="https://vilaverdeapps.github.io/patter/FAQ.html" />
+  <meta property="og:url" content="https://apps.vilaverde.rocks/patter/FAQ.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -115,6 +115,7 @@
         <a href="/patter/MARKETING.html#features">Features</a>
         <a href="/patter/MARKETING.html#languages">Languages</a>
         <a href="/patter/PRIVACY.html">Privacy</a>
+        <a href="/patter/TERMS.html">Terms</a>
         <a href="/patter/SUPPORT.html">Support</a>
       </div>
       <a class="pc-nav-cta" href="https://apps.apple.com/us/app/patter-language-learning/id6762643113">Get the app</a>
@@ -133,12 +134,17 @@
 
         <h3 id="what-is-patter">What is Patter?</h3>
         <p>
-          Patter is a serverless iOS language-learning app. You create AI contacts — each with a name, backstory, and personality — and text them. They reply only in the language you're learning. When you make a grammar mistake, a quiet correction appears below your message. No drills, no vocabulary decks, no account required.
+          Patter is a local-first iOS language-learning app. You create AI contacts — each with a name, backstory, and personality — and text them. They reply only in the language you're learning. When you make a grammar mistake, a quiet correction appears below your message. No drills, no vocabulary decks, no sign-up required for BYOK.
         </p>
 
         <h3 id="what-is-byok">What does BYOK mean?</h3>
         <p>
-          BYOK stands for <strong>Bring Your Own Key</strong>. Patter has no backend server — instead, you sign up directly with an AI provider (Google AI Studio, OpenAI, Anthropic, or OpenRouter), get an API key, and paste it into the app. Messages go from your iPhone straight to the provider. The developer never sees your conversations or your key.
+          BYOK stands for <strong>Bring Your Own Key</strong>. With BYOK, no developer-owned server is involved — you sign up directly with an AI provider (Google AI Studio, OpenAI, Anthropic, OpenRouter, Grok/xAI, or any OpenAI-compatible endpoint), get an API key, and paste it into the app. Messages go from your iPhone straight to the provider. The developer never sees your conversations or your key.
+        </p>
+
+        <h3 id="what-is-patterai">What is PatterAI? Do I need an API key?</h3>
+        <p>
+          <strong>PatterAI</strong> is an optional managed-AI subscription for people who don't want to manage their own API key. PatterAI requests are routed through a Cloudflare Worker operated by the developer — the Worker validates your subscription, tracks credits, and forwards the request to an AI provider. Message content is not logged or retained by the Worker. You can switch between BYOK and PatterAI at any time in Settings.
         </p>
 
         <h3 id="choose-ai-provider">Which AI provider should I start with?</h3>
@@ -301,7 +307,7 @@
 
         <h3 id="data-storage-privacy">Where is my data stored?</h3>
         <p>
-          Conversations are stored locally on your device via SwiftData. Your API key is stored exclusively in the iOS Keychain. Nothing is sent to a developer-owned server — all network traffic goes directly from your device to your chosen AI provider. See the <a href="/patter/PRIVACY.html">Privacy Policy</a> for full details.
+          Conversations are stored locally on your device via SwiftData. API keys (BYOK) and any PatterAI credentials are stored exclusively in the iOS Keychain. With BYOK, messages go directly from your device to your chosen AI provider — no developer-owned server is involved. With the optional PatterAI plan, requests pass through a Cloudflare Worker that validates your subscription and tracks credits without retaining message content. See the <a href="/patter/PRIVACY.html">Privacy Policy</a> for full details.
         </p>
 
         <hr />
@@ -319,6 +325,7 @@
         <a href="/patter/MARKETING.html">Home</a>
         <a href="/patter/FAQ.html">FAQ</a>
         <a href="/patter/PRIVACY.html">Privacy</a>
+        <a href="/patter/TERMS.html">Terms</a>
         <a href="/patter/SUPPORT.html">Support</a>
         <a href="https://github.com/vilaverdeapps/patter" rel="noopener noreferrer">GitHub</a>
       </div>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Patter — Language learning that feels like texting a friend</title>
   <meta name="description" content="Patter is a serverless iOS language-learning app. Text AI personas who stay in character and only reply in your target language. Inline corrections, tap-to-translate, no account, no subscription." />
-  <link rel="canonical" href="https://vilaverdeapps.github.io/patter/MARKETING.html" />
+  <link rel="canonical" href="https://apps.vilaverde.rocks/patter/MARKETING.html" />
   <meta name="robots" content="index,follow" />
   <meta name="author" content="vilaverdeapps" />
 
@@ -13,7 +13,7 @@
   <meta property="og:site_name" content="Patter" />
   <meta property="og:title" content="Patter — Language learning that feels like texting a friend" />
   <meta property="og:description" content="Chat with AI personas, get real-time grammar corrections, and learn at your level. Serverless, BYOK, no account required." />
-  <meta property="og:url" content="https://vilaverdeapps.github.io/patter/MARKETING.html" />
+  <meta property="og:url" content="https://apps.vilaverde.rocks/patter/MARKETING.html" />
   <meta property="og:locale" content="en_US" />
 
   <meta name="twitter:card" content="summary" />
@@ -29,7 +29,7 @@
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     "name": "Patter",
-    "operatingSystem": "iOS 18.6",
+    "operatingSystem": "iOS 18.6+",
     "applicationCategory": "EducationApplication",
     "offers": { "@type": "Offer", "priceCurrency": "USD" },
     "description": "Serverless iOS language-learning app. Chat with AI personas who stay in character, get real-time grammar corrections, and learn at your CEFR level. Bring your own API key.",
@@ -150,7 +150,7 @@ const PC = {
 
 const CONVERSATIONS = {
   pt_pt: {
-    persona: { name: 'Sofia Mendes' },
+    persona: { name: 'Inês' },
     messages: [
       { from: 'ai', text: 'Por favor, não te preocupes! Quando regressares, contas-me tudo sobre a Roménia e os planos de Sintra.' },
       { from: 'me', text: 'Nunca tive os pastéis do Raleigh. Onde está pastelaria fica?',
@@ -231,7 +231,7 @@ function ChatBubble({ from, text, dica, accent = '#FF6A3D', muted = '#2c2c2e', m
       </div>
       {showDica && dica && isMe && (
         <div style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 11, fontFamily: 'Inter, system-ui', color: '#5ac8fa', marginTop: 2, marginRight: 4 }}>
-          <span>✨</span><span style={{ fontWeight: 500 }}>Correcção de IA</span>
+          <span>✨</span><span style={{ fontWeight: 500 }}>Correção de IA</span>
         </div>
       )}
     </div>
@@ -295,6 +295,7 @@ function PCNav({ accent = PC.accent }) {
           <a href="#languages" style={{ color: 'inherit', textDecoration: 'none' }}>Languages</a>
           <a href="/patter/FAQ.html" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</a>
           <a href="/patter/PRIVACY.html" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy</a>
+          <a href="/patter/TERMS.html" style={{ color: 'inherit', textDecoration: 'none' }}>Terms</a>
           <a href="/patter/SUPPORT.html" style={{ color: 'inherit', textDecoration: 'none' }}>Support</a>
         </div>
         <a href="https://apps.apple.com/us/app/patter-language-learning/id6762643113" style={{ fontFamily: PC.sans, fontSize: 13, fontWeight: 600, color: '#fff', background: PC.ink, padding: '9px 16px', borderRadius: 999, textDecoration: 'none', whiteSpace: 'nowrap' }}>Get the app</a>
@@ -412,16 +413,49 @@ function PCFeatures({ accent = PC.accent }) {
               ))}
             </div>
           </PCFeatureCard>
-          <PCFeatureCard kicker="Tap-to-translate" title="Read in your language" body="Tap any AI message to see a translation." accent={accent}>
+          <PCFeatureCard kicker="Translate" title="Two ways to translate" body="Tap any AI message for an inline translation. Or open the Translator panel to translate freely between your native and target language without sending anything to the chat." accent={accent}>
             <div style={{ background: PC.bg, padding: 12, borderRadius: 10 }}>
               <ChatBubble from="ai" text="Que querida! Temos uns lenços de seda lindíssimos." accent={accent} muted="#2c2c2e" mutedText="#fff" size="sm" />
             </div>
           </PCFeatureCard>
-          <PCFeatureCard kicker="Levels" title="A1 to C1, mid-thread" body="Switch CEFR level any time. The contact's vocabulary, grammar, and patience adjust. The conversation doesn't reset." accent={accent}>
-            <div style={{ display: 'flex', gap: 4 }}>
-              {['A1', 'A2', 'B1', 'B2', 'C1'].map((lvl, i) => (
-                <div key={lvl} style={{ flex: 1, padding: '10px 6px', textAlign: 'center', borderRadius: 8, background: i === 2 ? accent : PC.bg, color: i === 2 ? '#fff' : PC.inkSoft, fontFamily: PC.mono, fontSize: 12, fontWeight: 600, border: `1px solid ${i === 2 ? accent : PC.line}` }}>{lvl}</div>
+          <PCFeatureCard kicker="Listen" title="Hear it spoken" body="Tap any message to hear it read aloud — at normal speed, slow, or a loop that walks slow → medium → full. Train your ear, not just your eyes." accent={accent}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, background: PC.bg, padding: '12px 14px', borderRadius: 10 }}>
+              <div style={{ width: 32, height: 32, borderRadius: '50%', background: accent, color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14 }}>▶</div>
+              <div style={{ display: 'flex', gap: 3, alignItems: 'flex-end', flex: 1, height: 22 }}>
+                {[8, 14, 20, 12, 18, 22, 16, 10, 14, 18, 12, 8].map((h, i) => (
+                  <div key={i} style={{ flex: 1, height: `${h}px`, background: `${accent}cc`, borderRadius: 2 }} />
+                ))}
+              </div>
+              <span style={{ fontFamily: PC.mono, fontSize: 11, color: PC.inkMuted }}>0.7×</span>
+            </div>
+          </PCFeatureCard>
+          <PCFeatureCard kicker="Quick replies" title="When the words won't come" body="Three suggested replies appear under each AI message, written at your level. Tap one to send, or use it as a starting point." accent={accent}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+              {['Hoje à noite, por volta das oito.', 'Ainda não sei. Talvez no fim-de-semana.', 'E tu, tens planos?'].map(t => (
+                <div key={t} style={{ background: '#fff', border: `1px solid ${PC.line}`, borderRadius: 14, padding: '8px 12px', fontFamily: PC.serif, fontSize: 13, color: PC.ink, fontStyle: 'italic' }}>{t}</div>
               ))}
+            </div>
+          </PCFeatureCard>
+          <PCFeatureCard kicker="Levels" title="A1 to C2, mid-thread" body="Switch CEFR level any time. The contact's vocabulary, grammar, and patience adjust. The conversation doesn't reset." accent={accent}>
+            <div style={{ display: 'flex', gap: 4 }}>
+              {['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map((lvl, i) => (
+                <div key={lvl} style={{ flex: 1, padding: '10px 4px', textAlign: 'center', borderRadius: 8, background: i === 2 ? accent : PC.bg, color: i === 2 ? '#fff' : PC.inkSoft, fontFamily: PC.mono, fontSize: 12, fontWeight: 600, border: `1px solid ${i === 2 ? accent : PC.line}` }}>{lvl}</div>
+              ))}
+            </div>
+          </PCFeatureCard>
+          <PCFeatureCard kicker="Stats" title="Watch yourself improve" body="A weekly view of messages sent, time spent, words learned, and most-improved grammar patterns. No leaderboards, no shaming." accent={accent}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: PC.mono, fontSize: 10, color: PC.inkMuted }}>
+                <span>THIS WEEK</span><span style={{ color: accent, fontWeight: 600 }}>+27%</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'flex-end', gap: 4, height: 48 }}>
+                {[18, 32, 24, 40, 36, 28, 46].map((h, i) => (
+                  <div key={i} style={{ flex: 1, height: `${h}px`, background: i === 6 ? accent : `${accent}66`, borderRadius: 3 }} />
+                ))}
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: PC.mono, fontSize: 10, color: PC.inkMuted }}>
+                <span>M T W T F S S</span><span>184 msgs</span>
+              </div>
             </div>
           </PCFeatureCard>
           <PCFeatureCard kicker="Streak" title="Daily goals, no nags" body="Track consecutive days. Hit your message count. Local notifications, not push spam." accent={accent}>
@@ -435,9 +469,9 @@ function PCFeatures({ accent = PC.accent }) {
               <span style={{ color: accent, fontWeight: 600 }}>14 day streak</span>
             </div>
           </PCFeatureCard>
-          <PCFeatureCard kicker="Serverless" title="Your data, your phone" body="No account. No backend. Conversations live on your device. AI calls go directly from your phone to your provider, with your key." accent={accent}>
+          <PCFeatureCard kicker="Local-first" title="Your conversations, your phone" body="Conversations and personas live on your device. Use your own API key (BYOK) and calls go straight to the provider, or subscribe to PatterAI and let us handle the keys." accent={accent}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
-              {['iPhone', 'Your API key', 'LLM provider'].map((label, i, arr) => (
+              {['iPhone', 'BYOK or PatterAI', 'AI provider'].map((label, i, arr) => (
                 <React.Fragment key={label}>
                   <div style={{ fontFamily: PC.mono, fontSize: 11, color: PC.inkSoft, padding: '6px 10px', background: PC.bg, borderRadius: 8 }}>{label}</div>
                   {i < arr.length - 1 && <span style={{ color: PC.inkMuted }}>→</span>}
@@ -489,20 +523,22 @@ function PCPrivacySection({ accent = PC.accent }) {
       <div style={{ maxWidth: 1080, margin: '0 auto' }}>
         <div style={{ fontFamily: PC.mono, fontSize: 12, letterSpacing: 1.4, color: PC.sun, textTransform: 'uppercase', marginBottom: 32 }}>Privacy by architecture</div>
         <h2 className="pc-privacy-h2" style={{ fontFamily: PC.serif }}>
-          We don't have a server.<br /><span style={{ fontStyle: 'italic', color: PC.sun }}>So we can't lose your data.</span>
+          Your conversations stay<br /><span style={{ fontStyle: 'italic', color: PC.sun }}>on your device.</span>
         </h2>
         <div className="pc-privacy-grid">
           <p style={{ fontFamily: PC.serif, fontSize: 19, lineHeight: 1.55, color: '#d8cfc0', margin: 0 }}>
-            Patter is BYOK — bring your own key. You sign up with Google AI Studio, OpenAI, Anthropic, or any OpenAI-compatible provider,
-            paste your API key, and we store it in the iOS Keychain on your phone. Every message goes
-            from your iPhone straight to the provider.
+            Patter is BYOK-first — bring your own key. Sign in with Google AI Studio, OpenAI, Anthropic, OpenRouter, Grok, or any
+            OpenAI-compatible provider, and your key lives in the iOS Keychain on your phone. Every message goes from your iPhone
+            straight to the provider — no proxy in between.
           </p>
           <p style={{ fontFamily: PC.serif, fontSize: 19, lineHeight: 1.55, color: '#d8cfc0', margin: 0 }}>
-            No account. No subscription. No analytics. No telemetry. Your conversations stay on your device.
+            Don't have a key? The optional <strong style={{ color: '#f5f0e8' }}>PatterAI</strong> plan routes through our Cloudflare
+            Worker for auth and credit tracking — no message content is logged or retained. Anonymous crash diagnostics (Sentry) are
+            opt-out in Settings. Chat content, API keys, and personas never leave your device for analytics.
           </p>
         </div>
         <div className="pc-privacy-badges">
-          {['No backend', 'No account', 'No subscriptions', 'No analytics', 'iCloud sync (coming soon)'].map(t => (
+          {['Conversations local-only', 'Keys in iOS Keychain', 'BYOK or managed PatterAI', 'Diagnostics opt-out', 'iCloud sync (coming soon)'].map(t => (
             <span key={t} style={{ fontFamily: PC.mono, fontSize: 12, color: '#f5f0e8', padding: '8px 14px', borderRadius: 999, border: '1px solid rgba(245,240,232,0.25)' }}>· {t}</span>
           ))}
         </div>
@@ -528,7 +564,8 @@ function PCFooter({ accent = PC.accent }) {
           </div>
           <div>
             <p style={{ fontFamily: PC.serif, fontSize: 18, color: PC.inkSoft, lineHeight: 1.5, marginTop: 0 }}>
-              One-time purchase. No subscription. You only pay your AI provider, by the message. Fractions of a cent.
+              Two ways to play: BYOK with your own API key (you pay your provider by the message — fractions of a cent),
+              or subscribe to PatterAI and let us handle the keys. Cancel anytime in Settings.
             </p>
             <a href="https://apps.apple.com/us/app/patter-language-learning/id6762643113" style={{ fontFamily: PC.sans, fontSize: 15, fontWeight: 600, color: '#fff', background: PC.ink, padding: '14px 28px', borderRadius: 999, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 10, marginTop: 8, whiteSpace: 'nowrap' }}>
               <span style={{ fontSize: 18 }}>↓</span> Download for iPhone
@@ -540,6 +577,7 @@ function PCFooter({ accent = PC.accent }) {
           <div style={{ display: 'flex', gap: 24 }}>
             <a href="/patter/FAQ.html" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</a>
             <a href="/patter/PRIVACY.html" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy</a>
+            <a href="/patter/TERMS.html" style={{ color: 'inherit', textDecoration: 'none' }}>Terms</a>
             <a href="/patter/SUPPORT.html" style={{ color: 'inherit', textDecoration: 'none' }}>Support</a>
             <a href="https://github.com/vilaverdeapps/patter" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>GitHub</a>
           </div>
