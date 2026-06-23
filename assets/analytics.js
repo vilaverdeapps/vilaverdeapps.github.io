@@ -47,6 +47,39 @@
     window.gtag = gtag;
     gtag("js", new Date());
     gtag("config", GA_ID, { anonymize_ip: true });
+
+    attachAppStoreTracking();
+  }
+
+  // Fire a dedicated app_store_click event when any App Store link is clicked.
+  // Delegated listener so it covers links rendered after load too.
+  function attachAppStoreTracking() {
+    if (window.__vvaAppStoreTracked) return;
+    window.__vvaAppStoreTracked = true;
+
+    document.addEventListener(
+      "click",
+      function (e) {
+        var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+        if (!a) return;
+        var href = a.getAttribute("href") || "";
+        if (href.indexOf("apps.apple.com") === -1) return;
+
+        var path = window.location.pathname;
+        var app = "unknown";
+        if (path.indexOf("/snapback") === 0) app = "snapback";
+        else if (path.indexOf("/patter") === 0) app = "patter";
+
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "app_store_click", {
+            app: app,
+            link_url: href,
+            page_path: path
+          });
+        }
+      },
+      true
+    );
   }
 
   function injectStyles() {
