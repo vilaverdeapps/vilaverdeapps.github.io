@@ -41,6 +41,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://vilaverdeapps.github.io/patter/PRICING.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://vilaverdeapps.github.io/site-privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

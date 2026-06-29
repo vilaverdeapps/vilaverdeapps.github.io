@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patter — Pricing</title>
+  <meta name="description" content="Patter pricing: bring your own API key with a one-time unlock, or subscribe to a managed PatterAI plan. Plans from $0.99/mo with a 7-day free trial. No account required." />
+  <link rel="canonical" href="https://apps.vilaverde.rocks/patter/PRICING.html" />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="vilaverdeapps" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Patter" />
+  <meta property="og:title" content="Patter — Pricing" />
+  <meta property="og:description" content="Bring your own API key, or subscribe to a managed PatterAI plan from $0.99/mo. 7-day free trial, cancel anytime." />
+  <meta property="og:url" content="https://apps.vilaverde.rocks/patter/PRICING.html" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Patter — Pricing" />
+  <meta name="twitter:description" content="BYOK with a one-time unlock, or managed PatterAI plans from $0.99/mo. 7-day free trial." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Patter",
+    "operatingSystem": "iOS 18.6+",
+    "applicationCategory": "EducationApplication",
+    "description": "Serverless iOS language-learning app. Bring your own API key or subscribe to a managed PatterAI plan.",
+    "author": { "@type": "Organization", "name": "vilaverdeapps" },
+    "offers": [
+      { "@type": "Offer", "name": "Bring Your Own AI Keys", "price": "4.99", "priceCurrency": "USD", "description": "One-time unlock to connect your own provider API keys." },
+      { "@type": "Offer", "name": "PatterAI Day Tripper", "price": "0.99", "priceCurrency": "USD", "description": "Monthly subscription, 160 messages/mo." },
+      { "@type": "Offer", "name": "PatterAI Explorer", "price": "1.99", "priceCurrency": "USD", "description": "Monthly subscription, 400 messages/mo." },
+      { "@type": "Offer", "name": "PatterAI Resident", "price": "2.99", "priceCurrency": "USD", "description": "Monthly subscription, 750 messages/mo." },
+      { "@type": "Offer", "name": "PatterAI Expat Family", "price": "6.99", "priceCurrency": "USD", "description": "Monthly subscription with Family Sharing, 320 messages/mo per member." },
+      { "@type": "Offer", "name": "Patter Credits Top-Up", "price": "0.99", "priceCurrency": "USD", "description": "100 credits, no expiry." }
+    ]
+  }
+  </script>
+
+  <style>
+    html, body { margin: 0; padding: 0; background: #f5f0e8; font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+    * { box-sizing: border-box; }
+    body { overflow-x: hidden; }
+    a { color: inherit; }
+
+    /* Nav */
+    .pc-nav { display: flex; align-items: center; justify-content: space-between; padding: 24px 56px; }
+    .pc-nav-links { display: flex; align-items: center; gap: 32px; }
+
+    /* Hero */
+    .pc-phero { padding: 64px 56px 40px; position: relative; overflow: hidden; }
+    .pc-phero-inner { max-width: 1080px; margin: 0 auto; }
+    .pc-phero-h1 { font-size: 72px; line-height: 1; letter-spacing: -1.8px; margin: 24px 0 24px; font-weight: 400; max-width: 820px; }
+
+    /* Paths */
+    .pc-paths { padding: 24px 56px 40px; }
+    .pc-paths-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1080px; margin: 0 auto; }
+
+    /* Plans */
+    .pc-plans { padding: 64px 56px 96px; }
+    .pc-plans-inner { max-width: 1280px; margin: 0 auto; }
+    .pc-plans-h2 { font-size: 56px; line-height: 1; letter-spacing: -1.2px; margin: 20px 0 16px; font-weight: 400; max-width: 720px; }
+    .pc-plans-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; align-items: stretch; }
+
+    /* Footer */
+    .pc-footer { padding: 96px 56px 48px; }
+    .pc-footer-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: flex-end; padding-bottom: 56px; }
+    .pc-footer-h2 { font-size: 72px; line-height: 0.98; letter-spacing: -1.8px; margin: 0; font-weight: 400; }
+    .pc-footer-bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 32px; }
+
+    /* Tablet — 900px */
+    @media (max-width: 900px) {
+      .pc-nav { padding: 18px 32px; }
+      .pc-phero { padding: 48px 32px 32px; }
+      .pc-phero-h1 { font-size: clamp(40px, 7vw, 60px); }
+      .pc-paths { padding: 16px 32px 32px; }
+      .pc-paths-grid { grid-template-columns: 1fr; gap: 16px; }
+      .pc-plans { padding: 48px 32px 64px; }
+      .pc-plans-h2 { font-size: clamp(36px, 6vw, 48px); }
+      .pc-plans-grid { grid-template-columns: 1fr 1fr; }
+      .pc-footer { padding: 64px 32px 40px; }
+      .pc-footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .pc-footer-h2 { font-size: clamp(42px, 8vw, 60px); }
+      .pc-footer-bottom { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+
+    /* Mobile — 600px */
+    @media (max-width: 600px) {
+      .pc-nav { padding: 14px 20px; }
+      .pc-nav-links { display: none; }
+      .pc-phero { padding: 32px 20px 24px; }
+      .pc-phero-h1 { font-size: clamp(34px, 10vw, 48px); }
+      .pc-paths { padding: 12px 20px 24px; }
+      .pc-plans { padding: 40px 20px 56px; }
+      .pc-plans-grid { grid-template-columns: 1fr; }
+      .pc-footer { padding: 48px 20px 32px; }
+    }
+  </style>
+  <script src="/assets/analytics.js" defer></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel">
+const PC = {
+  bg: '#f5f0e8',
+  bgAlt: '#ece4d5',
+  ink: '#1f1a14',
+  inkSoft: '#5a4a38',
+  inkMuted: '#8a7a64',
+  accent: '#FF6A3D',
+  sun: '#E85D75',
+  forest: '#3D8B6E',
+  ocean: '#3D7AE8',
+  line: 'rgba(31,26,20,0.12)',
+  serif: '"Newsreader", "Source Serif Pro", Georgia, serif',
+  sans: '"Inter", system-ui, sans-serif',
+  mono: '"Geist Mono", ui-monospace, monospace',
+};
+
+const APP_URL = 'https://apps.apple.com/us/app/patter-language-learning/id6762643113';
+
+// PatterAI managed subscription tiers (US, monthly). 7-day free trial.
+const PLANS = [
+  { name: 'Day Tripper', price: '0.99', msgs: '160', blurb: 'A gentle start to your language journey.' },
+  { name: 'Explorer', price: '1.99', msgs: '400', blurb: 'More room for richer, longer conversations.' },
+  { name: 'Resident', price: '2.99', msgs: '750', blurb: 'Practice like you live there.', featured: true },
+  { name: 'Expat Family', price: '6.99', msgs: '320', perMember: true, blurb: 'Family Sharing — a quota for every member.' },
+];
+
+function PCBadge({ children, color = PC.accent }) {
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap', fontFamily: PC.mono, fontSize: 11, color, letterSpacing: 1, textTransform: 'uppercase', padding: '5px 10px', border: `1px solid ${color}40`, borderRadius: 999, background: `${color}0c` }}>{children}</span>
+  );
+}
+
+function PCNav() {
+  return (
+    <nav className="pc-nav" style={{ borderBottom: `1px solid ${PC.line}` }}>
+      <a href="/patter/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+        <img src="/assets/patter-icon.png" alt="" style={{ width: 32, height: 32, borderRadius: 8, display: 'block' }} />
+        <span style={{ fontFamily: PC.serif, fontSize: 21, fontWeight: 500, color: PC.ink, letterSpacing: -0.3 }}>Patter</span>
+      </a>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <div className="pc-nav-links" style={{ fontFamily: PC.sans, fontSize: 13.5, color: PC.inkSoft }}>
+          <a href="/patter/#features" style={{ color: 'inherit', textDecoration: 'none' }}>Features</a>
+          <a href="/patter/#languages" style={{ color: 'inherit', textDecoration: 'none' }}>Languages</a>
+          <a href="/patter/PRICING.html" style={{ color: PC.ink, textDecoration: 'none', fontWeight: 600 }}>Pricing</a>
+          <a href="/patter/FAQ.html" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</a>
+          <a href="/patter/PRIVACY.html" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy</a>
+          <a href="/patter/TERMS.html" style={{ color: 'inherit', textDecoration: 'none' }}>Terms</a>
+          <a href="/patter/SUPPORT.html" style={{ color: 'inherit', textDecoration: 'none' }}>Support</a>
+        </div>
+        <a href={APP_URL} style={{ fontFamily: PC.sans, fontSize: 13, fontWeight: 600, color: '#fff', background: PC.ink, padding: '9px 16px', borderRadius: 999, textDecoration: 'none', whiteSpace: 'nowrap' }}>Get the app</a>
+      </div>
+    </nav>
+  );
+}
+
+function PCHero() {
+  return (
+    <section className="pc-phero">
+      <div style={{ position: 'absolute', top: 64, right: 72, width: 120, height: 140, background: `repeating-linear-gradient(45deg, ${PC.accent}18, ${PC.accent}18 6px, transparent 6px, transparent 12px)`, borderRadius: 6, transform: 'rotate(8deg)', opacity: 0.6 }} />
+      <div className="pc-phero-inner">
+        <PCBadge>Pricing · App Store · iOS 18.6+</PCBadge>
+        <h1 className="pc-phero-h1" style={{ fontFamily: PC.serif, color: PC.ink }}>
+          Pay for the words,<br /><span style={{ fontStyle: 'italic', color: PC.accent }}>not the app.</span>
+        </h1>
+        <p style={{ fontFamily: PC.serif, fontSize: 21, lineHeight: 1.5, color: PC.inkSoft, margin: 0, maxWidth: 640, fontWeight: 400 }}>
+          Two ways to play. Bring your own API key with a one-time unlock and pay your provider by the
+          message — fractions of a cent. Or skip the keys entirely and subscribe to a managed PatterAI plan.
+          Every plan starts with a <strong style={{ color: PC.ink }}>7-day free trial</strong>. No account, cancel anytime.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function PCPaths() {
+  return (
+    <section className="pc-paths">
+      <div className="pc-paths-grid">
+        {/* BYOK */}
+        <div style={{ background: '#fff', border: `1px solid ${PC.line}`, borderRadius: 16, padding: 32, display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+            <PCBadge color={PC.forest}>Bring your own key</PCBadge>
+            <span style={{ fontFamily: PC.mono, fontSize: 12, color: PC.inkMuted }}>One-time</span>
+          </div>
+          <h2 style={{ fontFamily: PC.serif, fontSize: 30, fontWeight: 500, color: PC.ink, margin: 0, letterSpacing: -0.5, lineHeight: 1.05 }}>Bring Your Own AI Keys</h2>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
+            <span style={{ fontFamily: PC.serif, fontSize: 44, fontWeight: 500, color: PC.ink }}>$4.99</span>
+            <span style={{ fontFamily: PC.sans, fontSize: 14, color: PC.inkMuted }}>once · unlock forever</span>
+          </div>
+          <p style={{ fontFamily: PC.sans, fontSize: 14.5, lineHeight: 1.55, color: PC.inkSoft, margin: 0 }}>
+            Connect Google AI Studio, OpenAI, Anthropic, OpenRouter, Grok, or any OpenAI-compatible provider.
+            Your key lives in the iOS Keychain; messages go straight to the provider — no proxy, no subscription.
+            You pay your provider directly, usually fractions of a cent per message.
+          </p>
+          <a href={APP_URL} style={{ marginTop: 'auto', fontFamily: PC.sans, fontSize: 14, fontWeight: 600, color: PC.ink, background: 'transparent', padding: '12px 20px', borderRadius: 999, border: `1px solid ${PC.ink}`, textDecoration: 'none', alignSelf: 'flex-start' }}>Unlock in the app →</a>
+        </div>
+
+        {/* PatterAI */}
+        <div style={{ background: PC.ink, color: '#f5f0e8', border: `1px solid ${PC.ink}`, borderRadius: 16, padding: 32, display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+            <PCBadge color={PC.sun}>Managed PatterAI</PCBadge>
+            <span style={{ fontFamily: PC.mono, fontSize: 12, color: 'rgba(245,240,232,0.6)' }}>Subscription</span>
+          </div>
+          <h2 style={{ fontFamily: PC.serif, fontSize: 30, fontWeight: 500, margin: 0, letterSpacing: -0.5, lineHeight: 1.05 }}>No keys. We handle it.</h2>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
+            <span style={{ fontFamily: PC.serif, fontSize: 44, fontWeight: 500 }}>$0.99</span>
+            <span style={{ fontFamily: PC.sans, fontSize: 14, color: 'rgba(245,240,232,0.7)' }}>/mo and up · 7-day free trial</span>
+          </div>
+          <p style={{ fontFamily: PC.sans, fontSize: 14.5, lineHeight: 1.55, color: '#d8cfc0', margin: 0 }}>
+            Don't want to manage API keys? Subscribe to PatterAI and we route requests through our Cloudflare
+            Worker for auth and credit tracking — no message content is logged. Pick a monthly message quota
+            that fits how you practice. Cancel anytime in Settings.
+          </p>
+          <a href="#plans" style={{ marginTop: 'auto', fontFamily: PC.sans, fontSize: 14, fontWeight: 600, color: PC.ink, background: '#f5f0e8', padding: '12px 20px', borderRadius: 999, textDecoration: 'none', alignSelf: 'flex-start' }}>See the plans ↓</a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PCPlanCard({ plan }) {
+  const featured = plan.featured;
+  return (
+    <div style={{
+      background: featured ? PC.bgAlt : '#fff',
+      border: `1px solid ${featured ? PC.accent : PC.line}`,
+      borderRadius: 16, padding: 28, display: 'flex', flexDirection: 'column', gap: 14,
+      position: 'relative',
+      boxShadow: featured ? `0 20px 50px ${PC.accent}22` : 'none',
+    }}>
+      {featured && (
+        <span style={{ position: 'absolute', top: -11, left: 24, fontFamily: PC.mono, fontSize: 10, letterSpacing: 1, textTransform: 'uppercase', color: '#fff', background: PC.accent, padding: '4px 10px', borderRadius: 999 }}>Most popular</span>
+      )}
+      <div style={{ fontFamily: PC.serif, fontSize: 24, fontWeight: 500, color: PC.ink, letterSpacing: -0.4 }}>{plan.name}</div>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
+        <span style={{ fontFamily: PC.serif, fontSize: 40, fontWeight: 500, color: PC.ink }}>${plan.price}</span>
+        <span style={{ fontFamily: PC.sans, fontSize: 14, color: PC.inkMuted }}>/mo</span>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
+        <span style={{ fontFamily: PC.mono, fontSize: 15, fontWeight: 500, color: featured ? PC.accent : PC.ink }}>{plan.msgs}</span>
+        <span style={{ fontFamily: PC.sans, fontSize: 13, color: PC.inkSoft }}>messages / month{plan.perMember ? ' · per member' : ''}</span>
+      </div>
+      <p style={{ fontFamily: PC.serif, fontSize: 15, lineHeight: 1.45, color: PC.inkSoft, margin: 0, fontStyle: 'italic' }}>{plan.blurb}</p>
+      <a href={APP_URL} style={{
+        marginTop: 'auto', textAlign: 'center', fontFamily: PC.sans, fontSize: 14, fontWeight: 600,
+        color: featured ? '#fff' : PC.ink,
+        background: featured ? PC.ink : 'transparent',
+        padding: '11px 16px', borderRadius: 999,
+        border: `1px solid ${PC.ink}`, textDecoration: 'none',
+      }}>Start free trial</a>
+    </div>
+  );
+}
+
+function PCPlans() {
+  return (
+    <section id="plans" className="pc-plans" style={{ background: PC.bg, borderTop: `1px solid ${PC.line}` }}>
+      <div className="pc-plans-inner">
+        <PCBadge color={PC.sun}>PatterAI plans</PCBadge>
+        <h2 className="pc-plans-h2" style={{ fontFamily: PC.serif, color: PC.ink }}>
+          Pick a <span style={{ fontStyle: 'italic', color: PC.accent }}>monthly quota.</span>
+        </h2>
+        <p style={{ fontFamily: PC.serif, fontSize: 18, color: PC.inkSoft, maxWidth: 600, margin: '0 0 8px' }}>
+          Every plan is a monthly subscription with a 7-day free trial. Change tiers or cancel anytime in
+          the App Store. Prices shown are US App Store; your local price may differ.
+        </p>
+        <div className="pc-plans-grid">
+          {PLANS.map(p => <PCPlanCard key={p.name} plan={p} />)}
+        </div>
+
+        {/* Credits top-up */}
+        <div style={{ marginTop: 28, background: '#fff', border: `1px dashed ${PC.line}`, borderRadius: 16, padding: '24px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap' }}>
+          <div>
+            <div style={{ fontFamily: PC.mono, fontSize: 11, letterSpacing: 1.2, textTransform: 'uppercase', color: PC.forest, marginBottom: 8 }}>Top-up</div>
+            <div style={{ fontFamily: PC.serif, fontSize: 22, fontWeight: 500, color: PC.ink, marginBottom: 4 }}>Run low? Add 100 credits.</div>
+            <p style={{ fontFamily: PC.sans, fontSize: 14, color: PC.inkSoft, margin: 0, maxWidth: 520 }}>
+              A one-time top-up for your PatterAI balance. Credits never expire — use them whenever the
+              conversation's flowing.
+            </p>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, whiteSpace: 'nowrap' }}>
+            <span style={{ fontFamily: PC.serif, fontSize: 36, fontWeight: 500, color: PC.ink }}>$0.99</span>
+            <span style={{ fontFamily: PC.sans, fontSize: 13, color: PC.inkMuted }}>one-time</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PCFooter() {
+  return (
+    <footer className="pc-footer" style={{ background: PC.bg, borderTop: `1px solid ${PC.line}` }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+        <div className="pc-footer-grid" style={{ borderBottom: `1px solid ${PC.line}` }}>
+          <div>
+            <h2 className="pc-footer-h2" style={{ fontFamily: PC.serif, color: PC.ink }}>
+              Start a<br /><span style={{ fontStyle: 'italic', color: PC.accent }}>conversation.</span>
+            </h2>
+          </div>
+          <div>
+            <p style={{ fontFamily: PC.serif, fontSize: 18, color: PC.inkSoft, lineHeight: 1.5, marginTop: 0 }}>
+              Bring your own key or let PatterAI handle it. Either way the first week is free, and your
+              conversations never leave your phone.
+            </p>
+            <a href={APP_URL} style={{ fontFamily: PC.sans, fontSize: 15, fontWeight: 600, color: '#fff', background: PC.ink, padding: '14px 28px', borderRadius: 999, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 10, marginTop: 8, whiteSpace: 'nowrap' }}>
+              <span style={{ fontSize: 18 }}>↓</span> Download for iPhone
+            </a>
+          </div>
+        </div>
+        <div className="pc-footer-bottom" style={{ fontFamily: PC.sans, fontSize: 12.5, color: PC.inkMuted }}>
+          <span>© 2026 vilaverdeapps — independent software from somewhere quiet.</span>
+          <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+            <a href="/patter/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</a>
+            <a href="/patter/FAQ.html" style={{ color: 'inherit', textDecoration: 'none' }}>FAQ</a>
+            <a href="/patter/PRIVACY.html" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy</a>
+            <a href="/patter/TERMS.html" style={{ color: 'inherit', textDecoration: 'none' }}>Terms</a>
+            <a href="/patter/SUPPORT.html" style={{ color: 'inherit', textDecoration: 'none' }}>Support</a>
+            <a href="/site-privacy.html" style={{ color: 'inherit', textDecoration: 'none' }}>Site Privacy</a>
+          </div>
+        </div>
+        <div style={{ marginTop: 20, fontFamily: PC.sans, fontSize: 11, color: PC.inkMuted, lineHeight: 1.7 }}>
+          <p style={{ margin: '0 0 4px' }}>Prices shown are US App Store pricing in USD and may vary by region. Subscriptions renew monthly until cancelled; manage or cancel in your App Store account settings. Free-trial terms are shown at purchase.</p>
+          <p style={{ margin: 0 }}>Patter is developed by vilaverdeapps and is not affiliated with, endorsed by, or sponsored by any third-party service referenced on this page. Google and Gemini are trademarks of Google LLC. OpenAI is a trademark of OpenAI, L.L.C. Anthropic and Claude are trademarks of Anthropic, PBC. Apple, App Store, iPhone, and iOS are trademarks of Apple Inc., registered in the U.S. and other countries.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function Pricing() {
+  return (
+    <div style={{ background: PC.bg, color: PC.ink, width: '100%' }}>
+      <PCNav />
+      <PCHero />
+      <PCPaths />
+      <PCPlans />
+      <PCFooter />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<Pricing />);
+</script>
+</body>
+</html>
